@@ -1,0 +1,373 @@
+Simulator report for QDJB
+Sun Jan 01 00:33:19 2006
+Version 6.0 Build 178 04/27/2006 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2006 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 850.0 ns     ;
+; Simulation Netlist Size     ; 134 nodes    ;
+; Simulation Coverage         ;      45.52 % ;
+; Total Number of Transitions ; 327          ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone II   ;
+; Device                      ; EP2C8T144C8  ;
++-----------------------------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                      ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Option                                                                                     ; Setting    ; Default Value ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Simulation mode                                                                            ; Timing     ; Timing        ;
+; Start time                                                                                 ; 0 ns       ; 0 ns          ;
+; Add pins automatically to simulation output waveforms                                      ; On         ; On            ;
+; Check outputs                                                                              ; Off        ; Off           ;
+; Report simulation coverage                                                                 ; On         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On         ; On            ;
+; Display missing 1-value coverage report                                                    ; On         ; On            ;
+; Display missing 0-value coverage report                                                    ; On         ; On            ;
+; Detect setup and hold time violations                                                      ; Off        ; Off           ;
+; Detect glitches                                                                            ; Off        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off        ; Off           ;
+; Generate Signal Activity File                                                              ; Off        ; Off           ;
+; Group bus channels in simulation results                                                   ; Off        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off        ;               ;
+; Glitch Filtering                                                                           ; Off        ; Off           ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      45.52 % ;
+; Total nodes checked                                 ; 134          ;
+; Total output ports checked                          ; 134          ;
+; Total output ports with complete 1/0-value coverage ; 61           ;
+; Total output ports with no 1/0-value coverage       ; 68           ;
+; Total output ports with no 1-value coverage         ; 69           ;
+; Total output ports with no 0-value coverage         ; 72           ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++----------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                            ;
++----------------------------------+----------------------------------+------------------+
+; Node Name                        ; Output Port Name                 ; Output Port Type ;
++----------------------------------+----------------------------------+------------------+
+; |Block1|YMQ:inst16|Mux0~19       ; |Block1|YMQ:inst16|Mux0~19       ; combout          ;
+; |Block1|YMQ:inst16|Mux1~17       ; |Block1|YMQ:inst16|Mux1~17       ; combout          ;
+; |Block1|YMQ:inst16|Mux2~13       ; |Block1|YMQ:inst16|Mux2~13       ; combout          ;
+; |Block1|YMQ:inst16|Mux3~19       ; |Block1|YMQ:inst16|Mux3~19       ; combout          ;
+; |Block1|YMQ:inst16|Mux4~23       ; |Block1|YMQ:inst16|Mux4~23       ; combout          ;
+; |Block1|YMQ:inst16|Mux5~21       ; |Block1|YMQ:inst16|Mux5~21       ; combout          ;
+; |Block1|YMQ:inst16|Mux6~21       ; |Block1|YMQ:inst16|Mux6~21       ; combout          ;
+; |Block1|QDJB:inst|process0~138   ; |Block1|QDJB:inst|process0~138   ; combout          ;
+; |Block1|QDJB:inst|process0~139   ; |Block1|QDJB:inst|process0~139   ; combout          ;
+; |Block1|QDJB:inst|comb~0         ; |Block1|QDJB:inst|comb~0         ; combout          ;
+; |Block1|QDJB:inst|comb~348       ; |Block1|QDJB:inst|comb~348       ; combout          ;
+; |Block1|QDJB:inst|comb~1         ; |Block1|QDJB:inst|comb~1         ; combout          ;
+; |Block1|QDJB:inst|comb~349       ; |Block1|QDJB:inst|comb~349       ; combout          ;
+; |Block1|QDJB:inst|comb~350       ; |Block1|QDJB:inst|comb~350       ; combout          ;
+; |Block1|XZQ:inst1|comb~79        ; |Block1|XZQ:inst1|comb~79        ; combout          ;
+; |Block1|XZQ:inst1|comb~80        ; |Block1|XZQ:inst1|comb~80        ; combout          ;
+; |Block1|XZQ:inst1|comb~81        ; |Block1|XZQ:inst1|comb~81        ; combout          ;
+; |Block1|XZQ:inst1|comb~82        ; |Block1|XZQ:inst1|comb~82        ; combout          ;
+; |Block1|XZQ:inst1|comb~83        ; |Block1|XZQ:inst1|comb~83        ; combout          ;
+; |Block1|XZQ:inst1|comb~84        ; |Block1|XZQ:inst1|comb~84        ; combout          ;
+; |Block1|XZQ:inst1|comb~85        ; |Block1|XZQ:inst1|comb~85        ; combout          ;
+; |Block1|XZQ:inst1|comb~86        ; |Block1|XZQ:inst1|comb~86        ; combout          ;
+; |Block1|XZQ:inst1|comb~87        ; |Block1|XZQ:inst1|comb~87        ; combout          ;
+; |Block1|XZQ:inst1|comb~88        ; |Block1|XZQ:inst1|comb~88        ; combout          ;
+; |Block1|XZQ:inst1|comb~89        ; |Block1|XZQ:inst1|comb~89        ; combout          ;
+; |Block1|JFQ:inst4|Equal4~29      ; |Block1|JFQ:inst4|Equal4~29      ; combout          ;
+; |Block1|JFQ:inst4|Equal2~28      ; |Block1|JFQ:inst4|Equal2~28      ; combout          ;
+; |Block1|JFQ:inst4|Equal0~29      ; |Block1|JFQ:inst4|Equal0~29      ; combout          ;
+; |Block1|A~29                     ; |Block1|A~29                     ; combout          ;
+; |Block1|QDJB:inst|process0~140   ; |Block1|QDJB:inst|process0~140   ; combout          ;
+; |Block1|QDJB:inst|comb~330       ; |Block1|QDJB:inst|comb~330       ; combout          ;
+; |Block1|QDJB:inst|comb~2         ; |Block1|QDJB:inst|comb~2         ; combout          ;
+; |Block1|QDJB:inst|comb~336       ; |Block1|QDJB:inst|comb~336       ; combout          ;
+; |Block1|QDJB:inst|comb~351       ; |Block1|QDJB:inst|comb~351       ; combout          ;
+; |Block1|QDJB:inst|comb~342       ; |Block1|QDJB:inst|comb~342       ; combout          ;
+; |Block1|QDJB:inst|comb~352       ; |Block1|QDJB:inst|comb~352       ; combout          ;
+; |Block1|QDJB:inst|A1             ; |Block1|QDJB:inst|A1             ; combout          ;
+; |Block1|QDJB:inst|B1             ; |Block1|QDJB:inst|B1             ; combout          ;
+; |Block1|QDJB:inst|C1             ; |Block1|QDJB:inst|C1             ; combout          ;
+; |Block1|XZQ:inst1|temp[0]        ; |Block1|XZQ:inst1|temp[0]        ; combout          ;
+; |Block1|XZQ:inst1|temp[1]        ; |Block1|XZQ:inst1|temp[1]        ; combout          ;
+; |Block1|XZQ:inst1|temp[2]        ; |Block1|XZQ:inst1|temp[2]        ; combout          ;
+; |Block1|XZQ:inst1|temp[3]        ; |Block1|XZQ:inst1|temp[3]        ; combout          ;
+; |Block1|QDJB:inst|states[2]      ; |Block1|QDJB:inst|states[2]      ; combout          ;
+; |Block1|QDJB:inst|states[1]      ; |Block1|QDJB:inst|states[1]      ; combout          ;
+; |Block1|QDJB:inst|states[0]      ; |Block1|QDJB:inst|states[0]      ; combout          ;
+; |Block1|D                        ; |Block1|D                        ; combout          ;
+; |Block1|C                        ; |Block1|C                        ; combout          ;
+; |Block1|A                        ; |Block1|A                        ; combout          ;
+; |Block1|B                        ; |Block1|B                        ; combout          ;
+; |Block1|LED1                     ; |Block1|LED1                     ; padio            ;
+; |Block1|LED2                     ; |Block1|LED2                     ; padio            ;
+; |Block1|LED3                     ; |Block1|LED3                     ; padio            ;
+; |Block1|JF1_A[6]                 ; |Block1|JF1_A[6]                 ; padio            ;
+; |Block1|JF1_A[5]                 ; |Block1|JF1_A[5]                 ; padio            ;
+; |Block1|JF1_A[4]                 ; |Block1|JF1_A[4]                 ; padio            ;
+; |Block1|JF1_A[3]                 ; |Block1|JF1_A[3]                 ; padio            ;
+; |Block1|JF1_A[2]                 ; |Block1|JF1_A[2]                 ; padio            ;
+; |Block1|JF1_A[1]                 ; |Block1|JF1_A[1]                 ; padio            ;
+; |Block1|JF1_A[0]                 ; |Block1|JF1_A[0]                 ; padio            ;
+; |Block1|XZQ:inst1|comb~83clkctrl ; |Block1|XZQ:inst1|comb~83clkctrl ; outclk           ;
++----------------------------------+----------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++--------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                   ;
++------------------------------------+------------------------------------+------------------+
+; Node Name                          ; Output Port Name                   ; Output Port Type ;
++------------------------------------+------------------------------------+------------------+
+; |Block1|JSQ:inst2|TMPA[0]          ; |Block1|JSQ:inst2|TMPA[0]          ; regout           ;
+; |Block1|JSQ:inst2|TMPA[1]          ; |Block1|JSQ:inst2|TMPA[1]          ; regout           ;
+; |Block1|JSQ:inst2|TMPA[2]          ; |Block1|JSQ:inst2|TMPA[2]          ; regout           ;
+; |Block1|JSQ:inst2|TMPA[3]          ; |Block1|JSQ:inst2|TMPA[3]          ; regout           ;
+; |Block1|YMQ:inst15|Mux0~19         ; |Block1|YMQ:inst15|Mux0~19         ; combout          ;
+; |Block1|YMQ:inst15|Mux1~17         ; |Block1|YMQ:inst15|Mux1~17         ; combout          ;
+; |Block1|YMQ:inst15|Mux2~13         ; |Block1|YMQ:inst15|Mux2~13         ; combout          ;
+; |Block1|YMQ:inst15|Mux3~19         ; |Block1|YMQ:inst15|Mux3~19         ; combout          ;
+; |Block1|YMQ:inst15|Mux4~23         ; |Block1|YMQ:inst15|Mux4~23         ; combout          ;
+; |Block1|YMQ:inst15|Mux5~21         ; |Block1|YMQ:inst15|Mux5~21         ; combout          ;
+; |Block1|YMQ:inst15|Mux6~21         ; |Block1|YMQ:inst15|Mux6~21         ; combout          ;
+; |Block1|JFQ:inst4|points_C1[0]     ; |Block1|JFQ:inst4|points_C1[0]     ; regout           ;
+; |Block1|JFQ:inst4|points_B1[0]     ; |Block1|JFQ:inst4|points_B1[0]     ; regout           ;
+; |Block1|JFQ:inst4|points_D1[0]     ; |Block1|JFQ:inst4|points_D1[0]     ; regout           ;
+; |Block1|JFQ:inst4|points_A1[0]     ; |Block1|JFQ:inst4|points_A1[0]     ; regout           ;
+; |Block1|JFQ:inst4|points_B1[1]     ; |Block1|JFQ:inst4|points_B1[1]     ; regout           ;
+; |Block1|JFQ:inst4|points_C1[1]     ; |Block1|JFQ:inst4|points_C1[1]     ; regout           ;
+; |Block1|JFQ:inst4|points_D1[1]     ; |Block1|JFQ:inst4|points_D1[1]     ; regout           ;
+; |Block1|JFQ:inst4|points_A1[1]     ; |Block1|JFQ:inst4|points_A1[1]     ; regout           ;
+; |Block1|JFQ:inst4|points_C1[2]     ; |Block1|JFQ:inst4|points_C1[2]     ; regout           ;
+; |Block1|JFQ:inst4|points_B1[2]     ; |Block1|JFQ:inst4|points_B1[2]     ; regout           ;
+; |Block1|JFQ:inst4|points_D1[2]     ; |Block1|JFQ:inst4|points_D1[2]     ; regout           ;
+; |Block1|JFQ:inst4|points_A1[2]     ; |Block1|JFQ:inst4|points_A1[2]     ; regout           ;
+; |Block1|JFQ:inst4|points_B1[3]     ; |Block1|JFQ:inst4|points_B1[3]     ; regout           ;
+; |Block1|JFQ:inst4|points_C1[3]     ; |Block1|JFQ:inst4|points_C1[3]     ; regout           ;
+; |Block1|JFQ:inst4|points_D1[3]     ; |Block1|JFQ:inst4|points_D1[3]     ; regout           ;
+; |Block1|JFQ:inst4|points_A1[3]     ; |Block1|JFQ:inst4|points_A1[3]     ; regout           ;
+; |Block1|JSQ:inst2|TMPA~350         ; |Block1|JSQ:inst2|TMPA~350         ; combout          ;
+; |Block1|JSQ:inst2|TMPA[2]~351      ; |Block1|JSQ:inst2|TMPA[2]~351      ; combout          ;
+; |Block1|JSQ:inst2|Equal0~12        ; |Block1|JSQ:inst2|Equal0~12        ; combout          ;
+; |Block1|JSQ:inst2|TMPA~352         ; |Block1|JSQ:inst2|TMPA~352         ; combout          ;
+; |Block1|JSQ:inst2|Add0~113         ; |Block1|JSQ:inst2|Add0~113         ; combout          ;
+; |Block1|JSQ:inst2|TMPA~353         ; |Block1|JSQ:inst2|TMPA~353         ; combout          ;
+; |Block1|JSQ:inst2|Equal0~13        ; |Block1|JSQ:inst2|Equal0~13        ; combout          ;
+; |Block1|JSQ:inst2|TMPA~354         ; |Block1|JSQ:inst2|TMPA~354         ; combout          ;
+; |Block1|JFQ:inst4|points_B1~225    ; |Block1|JFQ:inst4|points_B1~225    ; combout          ;
+; |Block1|JFQ:inst4|points_C1~225    ; |Block1|JFQ:inst4|points_C1~225    ; combout          ;
+; |Block1|JFQ:inst4|points_D1~247    ; |Block1|JFQ:inst4|points_D1~247    ; combout          ;
+; |Block1|JFQ:inst4|points_A1~221    ; |Block1|JFQ:inst4|points_A1~221    ; combout          ;
+; |Block1|JFQ:inst4|points_C1[2]~226 ; |Block1|JFQ:inst4|points_C1[2]~226 ; combout          ;
+; |Block1|JFQ:inst4|points_B1[2]~226 ; |Block1|JFQ:inst4|points_B1[2]~226 ; combout          ;
+; |Block1|JFQ:inst4|points_D1[2]~248 ; |Block1|JFQ:inst4|points_D1[2]~248 ; combout          ;
+; |Block1|JFQ:inst4|points_A1[2]~222 ; |Block1|JFQ:inst4|points_A1[2]~222 ; combout          ;
+; |Block1|JFQ:inst4|points_B1~227    ; |Block1|JFQ:inst4|points_B1~227    ; combout          ;
+; |Block1|JFQ:inst4|points_C1~227    ; |Block1|JFQ:inst4|points_C1~227    ; combout          ;
+; |Block1|JFQ:inst4|points_D1~249    ; |Block1|JFQ:inst4|points_D1~249    ; combout          ;
+; |Block1|JFQ:inst4|points_A1~223    ; |Block1|JFQ:inst4|points_A1~223    ; combout          ;
+; |Block1|JFQ:inst4|points_C1[0]~228 ; |Block1|JFQ:inst4|points_C1[0]~228 ; combout          ;
+; |Block1|JFQ:inst4|points_B1[0]~228 ; |Block1|JFQ:inst4|points_B1[0]~228 ; combout          ;
+; |Block1|JFQ:inst4|points_D1[0]~250 ; |Block1|JFQ:inst4|points_D1[0]~250 ; combout          ;
+; |Block1|JFQ:inst4|points_A1[0]~224 ; |Block1|JFQ:inst4|points_A1[0]~224 ; combout          ;
+; |Block1|JSQ:inst2|DA[0]            ; |Block1|JSQ:inst2|DA[0]            ; combout          ;
+; |Block1|JSQ:inst2|DA[2]            ; |Block1|JSQ:inst2|DA[2]            ; combout          ;
+; |Block1|CLR                        ; |Block1|CLR                        ; combout          ;
+; |Block1|LDN                        ; |Block1|LDN                        ; combout          ;
+; |Block1|CLK                        ; |Block1|CLK                        ; combout          ;
+; |Block1|EN                         ; |Block1|EN                         ; combout          ;
+; |Block1|ADD                        ; |Block1|ADD                        ; combout          ;
+; |Block1|RST                        ; |Block1|RST                        ; combout          ;
+; |Block1|TA                         ; |Block1|TA                         ; combout          ;
+; |Block1|JSXS1[6]                   ; |Block1|JSXS1[6]                   ; padio            ;
+; |Block1|JSXS1[5]                   ; |Block1|JSXS1[5]                   ; padio            ;
+; |Block1|JSXS1[4]                   ; |Block1|JSXS1[4]                   ; padio            ;
+; |Block1|JSXS1[3]                   ; |Block1|JSXS1[3]                   ; padio            ;
+; |Block1|JSXS1[2]                   ; |Block1|JSXS1[2]                   ; padio            ;
+; |Block1|JSXS1[1]                   ; |Block1|JSXS1[1]                   ; padio            ;
+; |Block1|JSXS1[0]                   ; |Block1|JSXS1[0]                   ; padio            ;
+; |Block1|ADD~clk_delay_ctrl         ; |Block1|ADD~clk_delay_ctrl         ; clkout           ;
+; |Block1|ADD~clkctrl                ; |Block1|ADD~clkctrl                ; outclk           ;
++------------------------------------+------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++--------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                   ;
++------------------------------------+------------------------------------+------------------+
+; Node Name                          ; Output Port Name                   ; Output Port Type ;
++------------------------------------+------------------------------------+------------------+
+; |Block1|JSQ:inst2|TMPA[0]          ; |Block1|JSQ:inst2|TMPA[0]          ; regout           ;
+; |Block1|JSQ:inst2|TMPA[1]          ; |Block1|JSQ:inst2|TMPA[1]          ; regout           ;
+; |Block1|JSQ:inst2|TMPA[2]          ; |Block1|JSQ:inst2|TMPA[2]          ; regout           ;
+; |Block1|JSQ:inst2|TMPA[3]          ; |Block1|JSQ:inst2|TMPA[3]          ; regout           ;
+; |Block1|YMQ:inst15|Mux0~19         ; |Block1|YMQ:inst15|Mux0~19         ; combout          ;
+; |Block1|YMQ:inst15|Mux1~17         ; |Block1|YMQ:inst15|Mux1~17         ; combout          ;
+; |Block1|YMQ:inst15|Mux2~13         ; |Block1|YMQ:inst15|Mux2~13         ; combout          ;
+; |Block1|YMQ:inst15|Mux3~19         ; |Block1|YMQ:inst15|Mux3~19         ; combout          ;
+; |Block1|YMQ:inst15|Mux4~23         ; |Block1|YMQ:inst15|Mux4~23         ; combout          ;
+; |Block1|YMQ:inst15|Mux5~21         ; |Block1|YMQ:inst15|Mux5~21         ; combout          ;
+; |Block1|YMQ:inst15|Mux6~21         ; |Block1|YMQ:inst15|Mux6~21         ; combout          ;
+; |Block1|JFQ:inst4|points_C1[0]     ; |Block1|JFQ:inst4|points_C1[0]     ; regout           ;
+; |Block1|JFQ:inst4|points_B1[0]     ; |Block1|JFQ:inst4|points_B1[0]     ; regout           ;
+; |Block1|JFQ:inst4|points_D1[0]     ; |Block1|JFQ:inst4|points_D1[0]     ; regout           ;
+; |Block1|JFQ:inst4|points_A1[0]     ; |Block1|JFQ:inst4|points_A1[0]     ; regout           ;
+; |Block1|JFQ:inst4|points_B1[1]     ; |Block1|JFQ:inst4|points_B1[1]     ; regout           ;
+; |Block1|JFQ:inst4|points_C1[1]     ; |Block1|JFQ:inst4|points_C1[1]     ; regout           ;
+; |Block1|JFQ:inst4|points_D1[1]     ; |Block1|JFQ:inst4|points_D1[1]     ; regout           ;
+; |Block1|JFQ:inst4|points_A1[1]     ; |Block1|JFQ:inst4|points_A1[1]     ; regout           ;
+; |Block1|JFQ:inst4|points_C1[2]     ; |Block1|JFQ:inst4|points_C1[2]     ; regout           ;
+; |Block1|JFQ:inst4|points_B1[2]     ; |Block1|JFQ:inst4|points_B1[2]     ; regout           ;
+; |Block1|JFQ:inst4|points_D1[2]     ; |Block1|JFQ:inst4|points_D1[2]     ; regout           ;
+; |Block1|JFQ:inst4|points_A1[2]     ; |Block1|JFQ:inst4|points_A1[2]     ; regout           ;
+; |Block1|JFQ:inst4|points_B1[3]     ; |Block1|JFQ:inst4|points_B1[3]     ; regout           ;
+; |Block1|JFQ:inst4|points_C1[3]     ; |Block1|JFQ:inst4|points_C1[3]     ; regout           ;
+; |Block1|JFQ:inst4|points_D1[3]     ; |Block1|JFQ:inst4|points_D1[3]     ; regout           ;
+; |Block1|JFQ:inst4|points_A1[3]     ; |Block1|JFQ:inst4|points_A1[3]     ; regout           ;
+; |Block1|JSQ:inst2|TMPA~350         ; |Block1|JSQ:inst2|TMPA~350         ; combout          ;
+; |Block1|JSQ:inst2|TMPA[2]~351      ; |Block1|JSQ:inst2|TMPA[2]~351      ; combout          ;
+; |Block1|JSQ:inst2|Equal0~12        ; |Block1|JSQ:inst2|Equal0~12        ; combout          ;
+; |Block1|JSQ:inst2|TMPA~352         ; |Block1|JSQ:inst2|TMPA~352         ; combout          ;
+; |Block1|JSQ:inst2|Add0~113         ; |Block1|JSQ:inst2|Add0~113         ; combout          ;
+; |Block1|JSQ:inst2|TMPA~353         ; |Block1|JSQ:inst2|TMPA~353         ; combout          ;
+; |Block1|JSQ:inst2|Equal0~13        ; |Block1|JSQ:inst2|Equal0~13        ; combout          ;
+; |Block1|JSQ:inst2|TMPA~354         ; |Block1|JSQ:inst2|TMPA~354         ; combout          ;
+; |Block1|JFQ:inst4|points_D1[3]~246 ; |Block1|JFQ:inst4|points_D1[3]~246 ; combout          ;
+; |Block1|JFQ:inst4|points_B1~225    ; |Block1|JFQ:inst4|points_B1~225    ; combout          ;
+; |Block1|JFQ:inst4|points_C1~225    ; |Block1|JFQ:inst4|points_C1~225    ; combout          ;
+; |Block1|JFQ:inst4|points_D1~247    ; |Block1|JFQ:inst4|points_D1~247    ; combout          ;
+; |Block1|JFQ:inst4|points_A1~221    ; |Block1|JFQ:inst4|points_A1~221    ; combout          ;
+; |Block1|JFQ:inst4|points_C1[2]~226 ; |Block1|JFQ:inst4|points_C1[2]~226 ; combout          ;
+; |Block1|JFQ:inst4|points_B1[2]~226 ; |Block1|JFQ:inst4|points_B1[2]~226 ; combout          ;
+; |Block1|JFQ:inst4|points_D1[2]~248 ; |Block1|JFQ:inst4|points_D1[2]~248 ; combout          ;
+; |Block1|JFQ:inst4|points_A1[2]~222 ; |Block1|JFQ:inst4|points_A1[2]~222 ; combout          ;
+; |Block1|JFQ:inst4|points_B1~227    ; |Block1|JFQ:inst4|points_B1~227    ; combout          ;
+; |Block1|JFQ:inst4|points_C1~227    ; |Block1|JFQ:inst4|points_C1~227    ; combout          ;
+; |Block1|JFQ:inst4|points_D1~249    ; |Block1|JFQ:inst4|points_D1~249    ; combout          ;
+; |Block1|JFQ:inst4|points_A1~223    ; |Block1|JFQ:inst4|points_A1~223    ; combout          ;
+; |Block1|JFQ:inst4|points_C1[0]~228 ; |Block1|JFQ:inst4|points_C1[0]~228 ; combout          ;
+; |Block1|JFQ:inst4|points_B1[0]~228 ; |Block1|JFQ:inst4|points_B1[0]~228 ; combout          ;
+; |Block1|JFQ:inst4|points_D1[0]~250 ; |Block1|JFQ:inst4|points_D1[0]~250 ; combout          ;
+; |Block1|JFQ:inst4|points_A1[0]~224 ; |Block1|JFQ:inst4|points_A1[0]~224 ; combout          ;
+; |Block1|QDJB:inst|D1               ; |Block1|QDJB:inst|D1               ; combout          ;
+; |Block1|JSQ:inst2|DA[0]            ; |Block1|JSQ:inst2|DA[0]            ; combout          ;
+; |Block1|JSQ:inst2|DA[2]            ; |Block1|JSQ:inst2|DA[2]            ; combout          ;
+; |Block1|QDJB:inst|states[3]        ; |Block1|QDJB:inst|states[3]        ; combout          ;
+; |Block1|LDN                        ; |Block1|LDN                        ; combout          ;
+; |Block1|CLK                        ; |Block1|CLK                        ; combout          ;
+; |Block1|EN                         ; |Block1|EN                         ; combout          ;
+; |Block1|ADD                        ; |Block1|ADD                        ; combout          ;
+; |Block1|RST                        ; |Block1|RST                        ; combout          ;
+; |Block1|TA                         ; |Block1|TA                         ; combout          ;
+; |Block1|LED4                       ; |Block1|LED4                       ; padio            ;
+; |Block1|JSXS1[6]                   ; |Block1|JSXS1[6]                   ; padio            ;
+; |Block1|JSXS1[5]                   ; |Block1|JSXS1[5]                   ; padio            ;
+; |Block1|JSXS1[4]                   ; |Block1|JSXS1[4]                   ; padio            ;
+; |Block1|JSXS1[3]                   ; |Block1|JSXS1[3]                   ; padio            ;
+; |Block1|JSXS1[2]                   ; |Block1|JSXS1[2]                   ; padio            ;
+; |Block1|JSXS1[1]                   ; |Block1|JSXS1[1]                   ; padio            ;
+; |Block1|JSXS1[0]                   ; |Block1|JSXS1[0]                   ; padio            ;
+; |Block1|ADD~clk_delay_ctrl         ; |Block1|ADD~clk_delay_ctrl         ; clkout           ;
+; |Block1|ADD~clkctrl                ; |Block1|ADD~clkctrl                ; outclk           ;
++------------------------------------+------------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 6.0 Build 178 04/27/2006 SJ Full Version
+    Info: Processing started: Sun Jan 01 00:33:18 2006
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off QDJB -c QDJB
+Warning: Ignored node in vector source file. Can't find corresponding node name "A1" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "B1" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "C1" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "D1" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "states[3]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "states[2]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "states[1]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "states[0]" in design.
+Warning: Can't find signal in vector source file for input pin "|Block1|LDN"
+Warning: Can't find signal in vector source file for input pin "|Block1|CLK"
+Warning: Can't find signal in vector source file for input pin "|Block1|EN"
+Warning: Can't find signal in vector source file for input pin "|Block1|ADD"
+Warning: Can't find signal in vector source file for input pin "|Block1|RST"
+Warning: Can't find signal in vector source file for input pin "|Block1|TA"
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      45.52 %
+Info: Number of transitions in simulation is 327
+Info: Vector file QDJB.sim.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
+Info: Quartus II Simulator was successful. 0 errors, 14 warnings
+    Info: Processing ended: Sun Jan 01 00:33:18 2006
+    Info: Elapsed time: 00:00:01
+
+

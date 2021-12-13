@@ -1,0 +1,43 @@
+|XZQ
+CLR => temp[0].ACLR
+CLR => temp[1].ACLR
+CLR => temp[2].ACLR
+CLR => temp[3].ACLR
+A => comb~2.OUTPUTSELECT
+A => comb~5.OUTPUTSELECT
+A => comb~8.OUTPUTSELECT
+A => comb~13.OUTPUTSELECT
+A => comb~14.IN0
+B => comb~1.OUTPUTSELECT
+B => comb~4.OUTPUTSELECT
+B => comb~7.OUTPUTSELECT
+B => comb~11.OUTPUTSELECT
+B => comb~12.IN0
+C => comb~0.OUTPUTSELECT
+C => comb~3.OUTPUTSELECT
+C => comb~6.OUTPUTSELECT
+C => comb~9.OUTPUTSELECT
+C => comb~10.IN0
+D => comb~10.IN1
+AA[0] => comb~2.DATAB
+AA[1] => comb~5.DATAB
+AA[2] => comb~8.DATAB
+AA[3] => comb~13.DATAB
+BB[0] => comb~1.DATAB
+BB[1] => comb~4.DATAB
+BB[2] => comb~7.DATAB
+BB[3] => comb~11.DATAB
+CC[0] => comb~0.DATAB
+CC[1] => comb~3.DATAB
+CC[2] => comb~6.DATAB
+CC[3] => comb~9.DATAB
+DD[0] => comb~0.DATAA
+DD[1] => comb~3.DATAA
+DD[2] => comb~6.DATAA
+DD[3] => comb~9.DATAA
+OUTW[0] <= temp[0].DB_MAX_OUTPUT_PORT_TYPE
+OUTW[1] <= temp[1].DB_MAX_OUTPUT_PORT_TYPE
+OUTW[2] <= temp[2].DB_MAX_OUTPUT_PORT_TYPE
+OUTW[3] <= temp[3].DB_MAX_OUTPUT_PORT_TYPE
+
+

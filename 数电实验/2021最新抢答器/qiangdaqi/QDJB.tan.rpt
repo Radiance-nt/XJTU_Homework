@@ -1,0 +1,354 @@
+Timing Analyzer report for QDJB
+Sun Jan 01 01:55:13 2006
+Version 6.0 Build 178 04/27/2006 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Timing Analyzer Settings
+  4. Clock Settings Summary
+  5. Clock Setup: 'ADD'
+  6. Clock Setup: 'CLK'
+  7. tsu
+  8. tco
+  9. th
+ 10. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2006 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                                                                                        ;
++------------------------------+-------+---------------+------------------------------------------------+------------------------+------------------------+------------+----------+--------------+
+; Type                         ; Slack ; Required Time ; Actual Time                                    ; From                   ; To                     ; From Clock ; To Clock ; Failed Paths ;
++------------------------------+-------+---------------+------------------------------------------------+------------------------+------------------------+------------+----------+--------------+
+; Worst-case tsu               ; N/A   ; None          ; 6.119 ns                                       ; LDN                    ; JSQ:inst2|TMPA[3]      ; --         ; CLK      ; 0            ;
+; Worst-case tco               ; N/A   ; None          ; 11.033 ns                                      ; JSQ:inst2|TMPA[3]      ; JSXS1[4]               ; CLK        ; --       ; 0            ;
+; Worst-case th                ; N/A   ; None          ; -4.224 ns                                      ; LDN                    ; JSQ:inst2|TMPA[1]      ; --         ; CLK      ; 0            ;
+; Clock Setup: 'CLK'           ; N/A   ; None          ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; JSQ:inst2|TMPA[1]      ; JSQ:inst2|TMPA[2]      ; CLK        ; CLK      ; 0            ;
+; Clock Setup: 'ADD'           ; N/A   ; None          ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; JFQ:inst4|points_D1[0] ; JFQ:inst4|points_D1[2] ; ADD        ; ADD      ; 0            ;
+; Total number of failed paths ;       ;               ;                                                ;                        ;                        ;            ;          ; 0            ;
++------------------------------+-------+---------------+------------------------------------------------+------------------------+------------------------+------------+----------+--------------+
+
+
++------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Settings                                                                             ;
++-------------------------------------------------------+--------------------+------+----+-------------+
+; Option                                                ; Setting            ; From ; To ; Entity Name ;
++-------------------------------------------------------+--------------------+------+----+-------------+
+; Device Name                                           ; EP2C8T144C8        ;      ;    ;             ;
+; Timing Models                                         ; Final              ;      ;    ;             ;
+; Number of source nodes to report per destination node ; 10                 ;      ;    ;             ;
+; Number of destination nodes to report                 ; 10                 ;      ;    ;             ;
+; Number of paths to report                             ; 200                ;      ;    ;             ;
+; Report Minimum Timing Checks                          ; Off                ;      ;    ;             ;
+; Use Fast Timing Models                                ; Off                ;      ;    ;             ;
+; Report IO Paths Separately                            ; Off                ;      ;    ;             ;
+; Default hold multicycle                               ; Same As Multicycle ;      ;    ;             ;
+; Cut paths between unrelated clock domains             ; On                 ;      ;    ;             ;
+; Cut off read during write signal paths                ; On                 ;      ;    ;             ;
+; Cut off feedback from I/O pins                        ; On                 ;      ;    ;             ;
+; Report Combined Fast/Slow Timing                      ; Off                ;      ;    ;             ;
+; Ignore Clock Settings                                 ; Off                ;      ;    ;             ;
+; Analyze latches as synchronous elements               ; On                 ;      ;    ;             ;
+; Enable Recovery/Removal analysis                      ; Off                ;      ;    ;             ;
+; Enable Clock Latency                                  ; Off                ;      ;    ;             ;
+; Use TimeQuest Timing Analyzer                         ; Off                ;      ;    ;             ;
++-------------------------------------------------------+--------------------+------+----+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Settings Summary                                                                                                                                                             ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; Clock Node Name ; Clock Setting Name ; Type     ; Fmax Requirement ; Early Latency ; Late Latency ; Based on ; Multiply Base Fmax by ; Divide Base Fmax by ; Offset ; Phase offset ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; ADD             ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
+; CLK             ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: 'ADD'                                                                                                                                                                                                   ;
++-------+------------------------------------------------+------------------------+------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; Slack ; Actual fmax (period)                           ; From                   ; To                     ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-------+------------------------------------------------+------------------------+------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; JFQ:inst4|points_D1[0] ; JFQ:inst4|points_D1[2] ; ADD        ; ADD      ; None                        ; None                      ; 1.822 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; JFQ:inst4|points_C1[1] ; JFQ:inst4|points_C1[3] ; ADD        ; ADD      ; None                        ; None                      ; 1.540 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; JFQ:inst4|points_C1[3] ; JFQ:inst4|points_C1[1] ; ADD        ; ADD      ; None                        ; None                      ; 1.536 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; JFQ:inst4|points_B1[0] ; JFQ:inst4|points_B1[2] ; ADD        ; ADD      ; None                        ; None                      ; 1.538 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; JFQ:inst4|points_A1[1] ; JFQ:inst4|points_A1[3] ; ADD        ; ADD      ; None                        ; None                      ; 1.520 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; JFQ:inst4|points_A1[3] ; JFQ:inst4|points_A1[1] ; ADD        ; ADD      ; None                        ; None                      ; 1.440 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; JFQ:inst4|points_D1[2] ; JFQ:inst4|points_D1[1] ; ADD        ; ADD      ; None                        ; None                      ; 1.399 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; JFQ:inst4|points_D1[2] ; JFQ:inst4|points_D1[3] ; ADD        ; ADD      ; None                        ; None                      ; 1.397 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; JFQ:inst4|points_B1[2] ; JFQ:inst4|points_B1[1] ; ADD        ; ADD      ; None                        ; None                      ; 1.409 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; JFQ:inst4|points_D1[1] ; JFQ:inst4|points_D1[2] ; ADD        ; ADD      ; None                        ; None                      ; 1.411 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; JFQ:inst4|points_A1[2] ; JFQ:inst4|points_A1[1] ; ADD        ; ADD      ; None                        ; None                      ; 0.976 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; JFQ:inst4|points_A1[2] ; JFQ:inst4|points_A1[3] ; ADD        ; ADD      ; None                        ; None                      ; 0.974 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; JFQ:inst4|points_B1[0] ; JFQ:inst4|points_B1[3] ; ADD        ; ADD      ; None                        ; None                      ; 1.267 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; JFQ:inst4|points_B1[0] ; JFQ:inst4|points_B1[1] ; ADD        ; ADD      ; None                        ; None                      ; 1.265 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; JFQ:inst4|points_D1[1] ; JFQ:inst4|points_D1[3] ; ADD        ; ADD      ; None                        ; None                      ; 1.225 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; JFQ:inst4|points_D1[3] ; JFQ:inst4|points_D1[1] ; ADD        ; ADD      ; None                        ; None                      ; 1.223 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; JFQ:inst4|points_D1[0] ; JFQ:inst4|points_D1[3] ; ADD        ; ADD      ; None                        ; None                      ; 1.191 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; JFQ:inst4|points_C1[2] ; JFQ:inst4|points_C1[3] ; ADD        ; ADD      ; None                        ; None                      ; 1.186 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; JFQ:inst4|points_C1[1] ; JFQ:inst4|points_C1[2] ; ADD        ; ADD      ; None                        ; None                      ; 1.183 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; JFQ:inst4|points_B1[1] ; JFQ:inst4|points_B1[3] ; ADD        ; ADD      ; None                        ; None                      ; 1.182 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; JFQ:inst4|points_C1[2] ; JFQ:inst4|points_C1[1] ; ADD        ; ADD      ; None                        ; None                      ; 1.183 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; JFQ:inst4|points_A1[0] ; JFQ:inst4|points_A1[3] ; ADD        ; ADD      ; None                        ; None                      ; 1.181 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; JFQ:inst4|points_D1[0] ; JFQ:inst4|points_D1[1] ; ADD        ; ADD      ; None                        ; None                      ; 1.178 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; JFQ:inst4|points_A1[0] ; JFQ:inst4|points_A1[1] ; ADD        ; ADD      ; None                        ; None                      ; 1.174 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; JFQ:inst4|points_A1[1] ; JFQ:inst4|points_A1[2] ; ADD        ; ADD      ; None                        ; None                      ; 1.493 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; JFQ:inst4|points_B1[1] ; JFQ:inst4|points_B1[2] ; ADD        ; ADD      ; None                        ; None                      ; 1.070 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; JFQ:inst4|points_B1[2] ; JFQ:inst4|points_B1[3] ; ADD        ; ADD      ; None                        ; None                      ; 0.985 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; JFQ:inst4|points_C1[0] ; JFQ:inst4|points_C1[2] ; ADD        ; ADD      ; None                        ; None                      ; 0.797 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; JFQ:inst4|points_C1[0] ; JFQ:inst4|points_C1[1] ; ADD        ; ADD      ; None                        ; None                      ; 0.798 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; JFQ:inst4|points_C1[0] ; JFQ:inst4|points_C1[3] ; ADD        ; ADD      ; None                        ; None                      ; 0.792 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; JFQ:inst4|points_B1[3] ; JFQ:inst4|points_B1[1] ; ADD        ; ADD      ; None                        ; None                      ; 0.781 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; JFQ:inst4|points_A1[0] ; JFQ:inst4|points_A1[2] ; ADD        ; ADD      ; None                        ; None                      ; 1.069 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; JFQ:inst4|points_B1[3] ; JFQ:inst4|points_B1[3] ; ADD        ; ADD      ; None                        ; None                      ; 0.501 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; JFQ:inst4|points_A1[3] ; JFQ:inst4|points_A1[3] ; ADD        ; ADD      ; None                        ; None                      ; 0.501 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; JFQ:inst4|points_A1[2] ; JFQ:inst4|points_A1[2] ; ADD        ; ADD      ; None                        ; None                      ; 0.501 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; JFQ:inst4|points_C1[2] ; JFQ:inst4|points_C1[2] ; ADD        ; ADD      ; None                        ; None                      ; 0.501 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; JFQ:inst4|points_C1[0] ; JFQ:inst4|points_C1[0] ; ADD        ; ADD      ; None                        ; None                      ; 0.501 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; JFQ:inst4|points_A1[0] ; JFQ:inst4|points_A1[0] ; ADD        ; ADD      ; None                        ; None                      ; 0.501 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; JFQ:inst4|points_B1[1] ; JFQ:inst4|points_B1[1] ; ADD        ; ADD      ; None                        ; None                      ; 0.501 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; JFQ:inst4|points_A1[1] ; JFQ:inst4|points_A1[1] ; ADD        ; ADD      ; None                        ; None                      ; 0.501 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; JFQ:inst4|points_D1[3] ; JFQ:inst4|points_D1[3] ; ADD        ; ADD      ; None                        ; None                      ; 0.501 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; JFQ:inst4|points_C1[3] ; JFQ:inst4|points_C1[3] ; ADD        ; ADD      ; None                        ; None                      ; 0.501 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; JFQ:inst4|points_D1[2] ; JFQ:inst4|points_D1[2] ; ADD        ; ADD      ; None                        ; None                      ; 0.501 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; JFQ:inst4|points_B1[2] ; JFQ:inst4|points_B1[2] ; ADD        ; ADD      ; None                        ; None                      ; 0.501 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; JFQ:inst4|points_D1[0] ; JFQ:inst4|points_D1[0] ; ADD        ; ADD      ; None                        ; None                      ; 0.501 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; JFQ:inst4|points_B1[0] ; JFQ:inst4|points_B1[0] ; ADD        ; ADD      ; None                        ; None                      ; 0.501 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; JFQ:inst4|points_D1[1] ; JFQ:inst4|points_D1[1] ; ADD        ; ADD      ; None                        ; None                      ; 0.501 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; JFQ:inst4|points_C1[1] ; JFQ:inst4|points_C1[1] ; ADD        ; ADD      ; None                        ; None                      ; 0.501 ns                ;
++-------+------------------------------------------------+------------------------+------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: 'CLK'                                                                                                                                                                                         ;
++-------+------------------------------------------------+-------------------+-------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; Slack ; Actual fmax (period)                           ; From              ; To                ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-------+------------------------------------------------+-------------------+-------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; JSQ:inst2|TMPA[1] ; JSQ:inst2|TMPA[2] ; CLK        ; CLK      ; None                        ; None                      ; 1.970 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; JSQ:inst2|TMPA[2] ; JSQ:inst2|TMPA[1] ; CLK        ; CLK      ; None                        ; None                      ; 1.864 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; JSQ:inst2|TMPA[2] ; JSQ:inst2|TMPA[2] ; CLK        ; CLK      ; None                        ; None                      ; 1.863 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; JSQ:inst2|TMPA[1] ; JSQ:inst2|TMPA[1] ; CLK        ; CLK      ; None                        ; None                      ; 1.759 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; JSQ:inst2|TMPA[0] ; JSQ:inst2|TMPA[2] ; CLK        ; CLK      ; None                        ; None                      ; 1.556 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; JSQ:inst2|TMPA[1] ; JSQ:inst2|TMPA[3] ; CLK        ; CLK      ; None                        ; None                      ; 1.508 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; JSQ:inst2|TMPA[3] ; JSQ:inst2|TMPA[1] ; CLK        ; CLK      ; None                        ; None                      ; 1.490 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; JSQ:inst2|TMPA[3] ; JSQ:inst2|TMPA[2] ; CLK        ; CLK      ; None                        ; None                      ; 1.489 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; JSQ:inst2|TMPA[0] ; JSQ:inst2|TMPA[1] ; CLK        ; CLK      ; None                        ; None                      ; 1.344 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; JSQ:inst2|TMPA[0] ; JSQ:inst2|TMPA[3] ; CLK        ; CLK      ; None                        ; None                      ; 1.339 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; JSQ:inst2|TMPA[2] ; JSQ:inst2|TMPA[3] ; CLK        ; CLK      ; None                        ; None                      ; 1.289 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; JSQ:inst2|TMPA[0] ; JSQ:inst2|TMPA[0] ; CLK        ; CLK      ; None                        ; None                      ; 0.501 ns                ;
+; N/A   ; Restricted to 360.10 MHz ( period = 2.777 ns ) ; JSQ:inst2|TMPA[3] ; JSQ:inst2|TMPA[3] ; CLK        ; CLK      ; None                        ; None                      ; 0.501 ns                ;
++-------+------------------------------------------------+-------------------+-------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+
+
++-------------------------------------------------------------------------+
+; tsu                                                                     ;
++-------+--------------+------------+------+-------------------+----------+
+; Slack ; Required tsu ; Actual tsu ; From ; To                ; To Clock ;
++-------+--------------+------------+------+-------------------+----------+
+; N/A   ; None         ; 6.119 ns   ; LDN  ; JSQ:inst2|TMPA[0] ; CLK      ;
+; N/A   ; None         ; 6.119 ns   ; LDN  ; JSQ:inst2|TMPA[1] ; CLK      ;
+; N/A   ; None         ; 6.119 ns   ; LDN  ; JSQ:inst2|TMPA[2] ; CLK      ;
+; N/A   ; None         ; 6.119 ns   ; LDN  ; JSQ:inst2|TMPA[3] ; CLK      ;
+; N/A   ; None         ; 5.808 ns   ; EN   ; JSQ:inst2|TMPA[0] ; CLK      ;
+; N/A   ; None         ; 5.808 ns   ; EN   ; JSQ:inst2|TMPA[1] ; CLK      ;
+; N/A   ; None         ; 5.808 ns   ; EN   ; JSQ:inst2|TMPA[2] ; CLK      ;
+; N/A   ; None         ; 5.808 ns   ; EN   ; JSQ:inst2|TMPA[3] ; CLK      ;
++-------+--------------+------------+------+-------------------+----------+
+
+
++-------------------------------------------------------------------------------+
+; tco                                                                           ;
++-------+--------------+------------+-------------------+----------+------------+
+; Slack ; Required tco ; Actual tco ; From              ; To       ; From Clock ;
++-------+--------------+------------+-------------------+----------+------------+
+; N/A   ; None         ; 11.033 ns  ; JSQ:inst2|TMPA[3] ; JSXS1[4] ; CLK        ;
+; N/A   ; None         ; 11.029 ns  ; JSQ:inst2|TMPA[3] ; JSXS1[0] ; CLK        ;
+; N/A   ; None         ; 11.029 ns  ; JSQ:inst2|TMPA[3] ; JSXS1[1] ; CLK        ;
+; N/A   ; None         ; 11.017 ns  ; JSQ:inst2|TMPA[3] ; JSXS1[3] ; CLK        ;
+; N/A   ; None         ; 11.013 ns  ; JSQ:inst2|TMPA[3] ; JSXS1[2] ; CLK        ;
+; N/A   ; None         ; 10.973 ns  ; JSQ:inst2|TMPA[0] ; JSXS1[0] ; CLK        ;
+; N/A   ; None         ; 10.973 ns  ; JSQ:inst2|TMPA[0] ; JSXS1[4] ; CLK        ;
+; N/A   ; None         ; 10.961 ns  ; JSQ:inst2|TMPA[0] ; JSXS1[1] ; CLK        ;
+; N/A   ; None         ; 10.953 ns  ; JSQ:inst2|TMPA[0] ; JSXS1[3] ; CLK        ;
+; N/A   ; None         ; 10.945 ns  ; JSQ:inst2|TMPA[0] ; JSXS1[2] ; CLK        ;
+; N/A   ; None         ; 10.699 ns  ; JSQ:inst2|TMPA[2] ; JSXS1[4] ; CLK        ;
+; N/A   ; None         ; 10.696 ns  ; JSQ:inst2|TMPA[2] ; JSXS1[1] ; CLK        ;
+; N/A   ; None         ; 10.695 ns  ; JSQ:inst2|TMPA[2] ; JSXS1[0] ; CLK        ;
+; N/A   ; None         ; 10.691 ns  ; JSQ:inst2|TMPA[3] ; JSXS1[6] ; CLK        ;
+; N/A   ; None         ; 10.684 ns  ; JSQ:inst2|TMPA[2] ; JSXS1[3] ; CLK        ;
+; N/A   ; None         ; 10.681 ns  ; JSQ:inst2|TMPA[3] ; JSXS1[5] ; CLK        ;
+; N/A   ; None         ; 10.680 ns  ; JSQ:inst2|TMPA[2] ; JSXS1[2] ; CLK        ;
+; N/A   ; None         ; 10.620 ns  ; JSQ:inst2|TMPA[0] ; JSXS1[5] ; CLK        ;
+; N/A   ; None         ; 10.618 ns  ; JSQ:inst2|TMPA[0] ; JSXS1[6] ; CLK        ;
+; N/A   ; None         ; 10.451 ns  ; JSQ:inst2|TMPA[1] ; JSXS1[0] ; CLK        ;
+; N/A   ; None         ; 10.449 ns  ; JSQ:inst2|TMPA[1] ; JSXS1[4] ; CLK        ;
+; N/A   ; None         ; 10.442 ns  ; JSQ:inst2|TMPA[1] ; JSXS1[1] ; CLK        ;
+; N/A   ; None         ; 10.431 ns  ; JSQ:inst2|TMPA[1] ; JSXS1[3] ; CLK        ;
+; N/A   ; None         ; 10.426 ns  ; JSQ:inst2|TMPA[1] ; JSXS1[2] ; CLK        ;
+; N/A   ; None         ; 10.350 ns  ; JSQ:inst2|TMPA[2] ; JSXS1[6] ; CLK        ;
+; N/A   ; None         ; 10.346 ns  ; JSQ:inst2|TMPA[2] ; JSXS1[5] ; CLK        ;
+; N/A   ; None         ; 10.101 ns  ; JSQ:inst2|TMPA[1] ; JSXS1[6] ; CLK        ;
+; N/A   ; None         ; 10.099 ns  ; JSQ:inst2|TMPA[1] ; JSXS1[5] ; CLK        ;
++-------+--------------+------------+-------------------+----------+------------+
+
+
++-------------------------------------------------------------------------------+
+; th                                                                            ;
++---------------+-------------+-----------+------+-------------------+----------+
+; Minimum Slack ; Required th ; Actual th ; From ; To                ; To Clock ;
++---------------+-------------+-----------+------+-------------------+----------+
+; N/A           ; None        ; -4.224 ns ; LDN  ; JSQ:inst2|TMPA[1] ; CLK      ;
+; N/A           ; None        ; -4.265 ns ; LDN  ; JSQ:inst2|TMPA[3] ; CLK      ;
+; N/A           ; None        ; -4.342 ns ; LDN  ; JSQ:inst2|TMPA[0] ; CLK      ;
+; N/A           ; None        ; -4.750 ns ; LDN  ; JSQ:inst2|TMPA[2] ; CLK      ;
+; N/A           ; None        ; -5.542 ns ; EN   ; JSQ:inst2|TMPA[0] ; CLK      ;
+; N/A           ; None        ; -5.542 ns ; EN   ; JSQ:inst2|TMPA[1] ; CLK      ;
+; N/A           ; None        ; -5.542 ns ; EN   ; JSQ:inst2|TMPA[2] ; CLK      ;
+; N/A           ; None        ; -5.542 ns ; EN   ; JSQ:inst2|TMPA[3] ; CLK      ;
++---------------+-------------+-----------+------+-------------------+----------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Timing Analyzer
+    Info: Version 6.0 Build 178 04/27/2006 SJ Full Version
+    Info: Processing started: Sun Jan 01 01:55:13 2006
+Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off QDJB -c QDJB --timing_analysis_only
+Warning: Timing Analysis is analyzing one or more combinational loops as latches
+    Warning: Node "XZQ:inst1|temp[3]" is a latch
+    Warning: Node "XZQ:inst1|temp[2]" is a latch
+    Warning: Node "XZQ:inst1|temp[0]" is a latch
+    Warning: Node "XZQ:inst1|temp[1]" is a latch
+    Warning: Node "QDJB:inst|A1" is a latch
+    Warning: Node "QDJB:inst|B1" is a latch
+    Warning: Node "QDJB:inst|D1" is a latch
+    Warning: Node "QDJB:inst|C1" is a latch
+    Warning: Node "QDJB:inst|states[1]" is a latch
+    Warning: Node "QDJB:inst|states[2]" is a latch
+    Warning: Node "QDJB:inst|states[3]" is a latch
+    Warning: Node "QDJB:inst|states[0]" is a latch
+    Warning: Node "JSQ:inst2|DA[0]" is a latch
+    Warning: Node "JSQ:inst2|DA[2]" is a latch
+Warning: Found pins functioning as undefined clocks and/or memory enables
+    Info: Assuming node "ADD" is an undefined clock
+    Info: Assuming node "CLK" is an undefined clock
+Warning: Found 5 node(s) in clock paths which may be acting as ripple and/or gated clocks -- node(s) analyzed as buffer(s) resulting in clock skew
+    Info: Detected ripple clock "QDJB:inst|C1" as buffer
+    Info: Detected ripple clock "QDJB:inst|D1" as buffer
+    Info: Detected ripple clock "QDJB:inst|B1" as buffer
+    Info: Detected ripple clock "QDJB:inst|A1" as buffer
+    Info: Detected gated clock "XZQ:inst1|comb~83" as buffer
+Info: Clock "ADD" Internal fmax is restricted to 360.1 MHz between source register "JFQ:inst4|points_D1[0]" and destination register "JFQ:inst4|points_D1[2]"
+    Info: fmax restricted to clock pin edge rate 2.777 ns. Expand message to see actual delay path.
+        Info: + Longest register to register delay is 1.822 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X30_Y12_N19; Fanout = 5; REG Node = 'JFQ:inst4|points_D1[0]'
+            Info: 2: + IC(1.090 ns) + CELL(0.624 ns) = 1.714 ns; Loc. = LCCOMB_X32_Y12_N10; Fanout = 1; COMB Node = 'JFQ:inst4|points_D1[2]~248'
+            Info: 3: + IC(0.000 ns) + CELL(0.108 ns) = 1.822 ns; Loc. = LCFF_X32_Y12_N11; Fanout = 4; REG Node = 'JFQ:inst4|points_D1[2]'
+            Info: Total cell delay = 0.732 ns ( 40.18 % )
+            Info: Total interconnect delay = 1.090 ns ( 59.82 % )
+        Info: - Smallest clock skew is 0.017 ns
+            Info: + Shortest clock path from clock "ADD" to destination register is 2.888 ns
+                Info: 1: + IC(0.000 ns) + CELL(0.925 ns) = 0.925 ns; Loc. = PIN_97; Fanout = 16; CLK Node = 'ADD'
+                Info: 2: + IC(1.297 ns) + CELL(0.666 ns) = 2.888 ns; Loc. = LCFF_X32_Y12_N11; Fanout = 4; REG Node = 'JFQ:inst4|points_D1[2]'
+                Info: Total cell delay = 1.591 ns ( 55.09 % )
+                Info: Total interconnect delay = 1.297 ns ( 44.91 % )
+            Info: - Longest clock path from clock "ADD" to source register is 2.871 ns
+                Info: 1: + IC(0.000 ns) + CELL(0.925 ns) = 0.925 ns; Loc. = PIN_97; Fanout = 16; CLK Node = 'ADD'
+                Info: 2: + IC(1.280 ns) + CELL(0.666 ns) = 2.871 ns; Loc. = LCFF_X30_Y12_N19; Fanout = 5; REG Node = 'JFQ:inst4|points_D1[0]'
+                Info: Total cell delay = 1.591 ns ( 55.42 % )
+                Info: Total interconnect delay = 1.280 ns ( 44.58 % )
+        Info: + Micro clock to output delay of source is 0.304 ns
+        Info: + Micro setup delay of destination is -0.040 ns
+Info: Clock "CLK" Internal fmax is restricted to 360.1 MHz between source register "JSQ:inst2|TMPA[1]" and destination register "JSQ:inst2|TMPA[2]"
+    Info: fmax restricted to clock pin edge rate 2.777 ns. Expand message to see actual delay path.
+        Info: + Longest register to register delay is 1.970 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X9_Y18_N15; Fanout = 11; REG Node = 'JSQ:inst2|TMPA[1]'
+            Info: 2: + IC(0.457 ns) + CELL(0.623 ns) = 1.080 ns; Loc. = LCCOMB_X9_Y18_N24; Fanout = 1; COMB Node = 'JSQ:inst2|Add0~113'
+            Info: 3: + IC(0.412 ns) + CELL(0.370 ns) = 1.862 ns; Loc. = LCCOMB_X9_Y18_N20; Fanout = 1; COMB Node = 'JSQ:inst2|TMPA~353'
+            Info: 4: + IC(0.000 ns) + CELL(0.108 ns) = 1.970 ns; Loc. = LCFF_X9_Y18_N21; Fanout = 10; REG Node = 'JSQ:inst2|TMPA[2]'
+            Info: Total cell delay = 1.101 ns ( 55.89 % )
+            Info: Total interconnect delay = 0.869 ns ( 44.11 % )
+        Info: - Smallest clock skew is 0.000 ns
+            Info: + Shortest clock path from clock "CLK" to destination register is 4.434 ns
+                Info: 1: + IC(0.000 ns) + CELL(0.935 ns) = 0.935 ns; Loc. = PIN_96; Fanout = 4; CLK Node = 'CLK'
+                Info: 2: + IC(2.833 ns) + CELL(0.666 ns) = 4.434 ns; Loc. = LCFF_X9_Y18_N21; Fanout = 10; REG Node = 'JSQ:inst2|TMPA[2]'
+                Info: Total cell delay = 1.601 ns ( 36.11 % )
+                Info: Total interconnect delay = 2.833 ns ( 63.89 % )
+            Info: - Longest clock path from clock "CLK" to source register is 4.434 ns
+                Info: 1: + IC(0.000 ns) + CELL(0.935 ns) = 0.935 ns; Loc. = PIN_96; Fanout = 4; CLK Node = 'CLK'
+                Info: 2: + IC(2.833 ns) + CELL(0.666 ns) = 4.434 ns; Loc. = LCFF_X9_Y18_N15; Fanout = 11; REG Node = 'JSQ:inst2|TMPA[1]'
+                Info: Total cell delay = 1.601 ns ( 36.11 % )
+                Info: Total interconnect delay = 2.833 ns ( 63.89 % )
+        Info: + Micro clock to output delay of source is 0.304 ns
+        Info: + Micro setup delay of destination is -0.040 ns
+Info: tsu for register "JSQ:inst2|TMPA[0]" (data pin = "LDN", clock pin = "CLK") is 6.119 ns
+    Info: + Longest pin to register delay is 10.593 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.935 ns) = 0.935 ns; Loc. = PIN_93; Fanout = 5; PIN Node = 'LDN'
+        Info: 2: + IC(7.243 ns) + CELL(0.206 ns) = 8.384 ns; Loc. = LCCOMB_X15_Y18_N8; Fanout = 4; COMB Node = 'JSQ:inst2|TMPA[2]~351'
+        Info: 3: + IC(1.354 ns) + CELL(0.855 ns) = 10.593 ns; Loc. = LCFF_X9_Y18_N13; Fanout = 12; REG Node = 'JSQ:inst2|TMPA[0]'
+        Info: Total cell delay = 1.996 ns ( 18.84 % )
+        Info: Total interconnect delay = 8.597 ns ( 81.16 % )
+    Info: + Micro setup delay of destination is -0.040 ns
+    Info: - Shortest clock path from clock "CLK" to destination register is 4.434 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.935 ns) = 0.935 ns; Loc. = PIN_96; Fanout = 4; CLK Node = 'CLK'
+        Info: 2: + IC(2.833 ns) + CELL(0.666 ns) = 4.434 ns; Loc. = LCFF_X9_Y18_N13; Fanout = 12; REG Node = 'JSQ:inst2|TMPA[0]'
+        Info: Total cell delay = 1.601 ns ( 36.11 % )
+        Info: Total interconnect delay = 2.833 ns ( 63.89 % )
+Info: tco from clock "CLK" to destination pin "JSXS1[4]" through register "JSQ:inst2|TMPA[3]" is 11.033 ns
+    Info: + Longest clock path from clock "CLK" to source register is 4.434 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.935 ns) = 0.935 ns; Loc. = PIN_96; Fanout = 4; CLK Node = 'CLK'
+        Info: 2: + IC(2.833 ns) + CELL(0.666 ns) = 4.434 ns; Loc. = LCFF_X9_Y18_N17; Fanout = 9; REG Node = 'JSQ:inst2|TMPA[3]'
+        Info: Total cell delay = 1.601 ns ( 36.11 % )
+        Info: Total interconnect delay = 2.833 ns ( 63.89 % )
+    Info: + Micro clock to output delay of source is 0.304 ns
+    Info: + Longest register to pin delay is 6.295 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X9_Y18_N17; Fanout = 9; REG Node = 'JSQ:inst2|TMPA[3]'
+        Info: 2: + IC(1.156 ns) + CELL(0.366 ns) = 1.522 ns; Loc. = LCCOMB_X9_Y18_N30; Fanout = 1; COMB Node = 'YMQ:inst15|Mux2~13'
+        Info: 3: + IC(1.537 ns) + CELL(3.236 ns) = 6.295 ns; Loc. = PIN_137; Fanout = 0; PIN Node = 'JSXS1[4]'
+        Info: Total cell delay = 3.602 ns ( 57.22 % )
+        Info: Total interconnect delay = 2.693 ns ( 42.78 % )
+Info: th for register "JSQ:inst2|TMPA[1]" (data pin = "LDN", clock pin = "CLK") is -4.224 ns
+    Info: + Longest clock path from clock "CLK" to destination register is 4.434 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.935 ns) = 0.935 ns; Loc. = PIN_96; Fanout = 4; CLK Node = 'CLK'
+        Info: 2: + IC(2.833 ns) + CELL(0.666 ns) = 4.434 ns; Loc. = LCFF_X9_Y18_N15; Fanout = 11; REG Node = 'JSQ:inst2|TMPA[1]'
+        Info: Total cell delay = 1.601 ns ( 36.11 % )
+        Info: Total interconnect delay = 2.833 ns ( 63.89 % )
+    Info: + Micro hold delay of destination is 0.306 ns
+    Info: - Shortest pin to register delay is 8.964 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.935 ns) = 0.935 ns; Loc. = PIN_93; Fanout = 5; PIN Node = 'LDN'
+        Info: 2: + IC(7.416 ns) + CELL(0.505 ns) = 8.856 ns; Loc. = LCCOMB_X9_Y18_N14; Fanout = 1; COMB Node = 'JSQ:inst2|TMPA~352'
+        Info: 3: + IC(0.000 ns) + CELL(0.108 ns) = 8.964 ns; Loc. = LCFF_X9_Y18_N15; Fanout = 11; REG Node = 'JSQ:inst2|TMPA[1]'
+        Info: Total cell delay = 1.548 ns ( 17.27 % )
+        Info: Total interconnect delay = 7.416 ns ( 82.73 % )
+Info: Quartus II Timing Analyzer was successful. 0 errors, 17 warnings
+    Info: Processing ended: Sun Jan 01 01:55:13 2006
+    Info: Elapsed time: 00:00:01
+
+

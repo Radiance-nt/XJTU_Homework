@@ -1,0 +1,229 @@
+Version 6.0 Build 178 04/27/2006 SJ Full Version
+11
+729
+OFF
+OFF
+OFF
+OFF
+OFF
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Partition --
+-- End Partition --
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+7449
+# storage
+db|five.(1).cnf
+db|five.(1).cnf
+# case_insensitive
+# source_file
+..|..|..|..|altera|quartus60|libraries|others|maxplus2|7449.bdf
+55dfeea5905bd9dd1223330961b255
+24
+# hierarchies {
+7449:inst24
+7449:inst23
+}
+# end
+# entity
+74163
+# storage
+db|five.(2).cnf
+db|five.(2).cnf
+# case_insensitive
+# source_file
+..|..|..|..|altera|quartus60|libraries|others|maxplus2|74163.tdf
+f24339fa58554a6dd21256ad79b3e
+6
+# user_parameter {
+DEVICE_FAMILY
+Cyclone II
+PARAMETER_UNKNOWN
+USR
+AUTO_CARRY_CHAINS
+ON
+AUTO_CARRY
+USR
+IGNORE_CARRY_BUFFERS
+OFF
+IGNORE_CARRY
+USR
+AUTO_CASCADE_CHAINS
+ON
+AUTO_CASCADE
+USR
+IGNORE_CASCADE_BUFFERS
+OFF
+IGNORE_CASCADE
+USR
+}
+# used_port {
+QD
+-1
+3
+QC
+-1
+3
+QB
+-1
+3
+QA
+-1
+3
+CLRN
+-1
+3
+CLK
+-1
+3
+D
+-1
+1
+C
+-1
+1
+B
+-1
+1
+A
+-1
+1
+LDN
+-1
+2
+ENT
+-1
+2
+ENP
+-1
+2
+}
+# include_file {
+..|..|..|..|altera|quartus60|libraries|megafunctions|aglobal.inc
+b3d07c643dae10ab2b3e646e99ec45fc
+}
+# hierarchies {
+74163:inst
+}
+# end
+# entity
+f74163
+# storage
+db|five.(3).cnf
+db|five.(3).cnf
+# case_insensitive
+# source_file
+..|..|..|..|altera|quartus60|libraries|others|maxplus2|f74163.bdf
+4b5be968de84ee6bdb36d12e11b1819a
+24
+# hierarchies {
+74163:inst2|f74163:sub
+74163:inst|f74163:sub
+}
+# end
+# entity
+74163
+# storage
+db|five.(4).cnf
+db|five.(4).cnf
+# case_insensitive
+# source_file
+..|..|..|..|altera|quartus60|libraries|others|maxplus2|74163.tdf
+f24339fa58554a6dd21256ad79b3e
+6
+# user_parameter {
+DEVICE_FAMILY
+Cyclone II
+PARAMETER_UNKNOWN
+USR
+AUTO_CARRY_CHAINS
+ON
+AUTO_CARRY
+USR
+IGNORE_CARRY_BUFFERS
+OFF
+IGNORE_CARRY
+USR
+AUTO_CASCADE_CHAINS
+ON
+AUTO_CASCADE
+USR
+IGNORE_CASCADE_BUFFERS
+OFF
+IGNORE_CASCADE
+USR
+}
+# used_port {
+QD
+-1
+3
+QC
+-1
+3
+QB
+-1
+3
+QA
+-1
+3
+ENT
+-1
+3
+ENP
+-1
+3
+CLRN
+-1
+3
+CLK
+-1
+3
+D
+-1
+1
+C
+-1
+1
+B
+-1
+1
+A
+-1
+1
+LDN
+-1
+2
+}
+# include_file {
+..|..|..|..|altera|quartus60|libraries|megafunctions|aglobal.inc
+b3d07c643dae10ab2b3e646e99ec45fc
+}
+# hierarchies {
+74163:inst2
+}
+# end
+# entity
+five
+# storage
+db|five.(0).cnf
+db|five.(0).cnf
+# case_insensitive
+# source_file
+five.bdf
+93a6d1f5d2c460a836c599612b48d2c8
+24
+# hierarchies {
+|
+}
+# end
+# complete
+

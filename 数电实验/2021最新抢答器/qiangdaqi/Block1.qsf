@@ -1,0 +1,68 @@
+# Copyright (C) 1991-2006 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, Altera MegaCore Function License 
+# Agreement, or other applicable license agreement, including, 
+# without limitation, that your use is for the sole purpose of 
+# programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the 
+# applicable agreement for further details.
+
+
+# The default values for assignments are stored in the file
+#		Block1_assignment_defaults.qdf
+# If this file doesn't exist, and for assignments not listed, see file
+#		assignment_defaults.qdf
+
+# Altera recommends that you do not modify this file. This
+# file is updated automatically by the Quartus II software
+# and any changes you make may be lost or overwritten.
+
+
+set_global_assignment -name FAMILY "Cyclone II"
+set_global_assignment -name DEVICE EP2C8T144C8
+set_global_assignment -name TOP_LEVEL_ENTITY Block1
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 6.0
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "00:10:15  JANUARY 01, 2006"
+set_global_assignment -name LAST_QUARTUS_VERSION 6.0
+set_global_assignment -name VHDL_FILE JFQ.vhd
+set_global_assignment -name VHDL_FILE JSQ.vhd
+set_global_assignment -name VHDL_FILE QDJB.vhd
+set_global_assignment -name VHDL_FILE YMQ.vhd
+set_global_assignment -name BDF_FILE "E:\\2018.5.28\\Block1.bdf"
+set_location_assignment PIN_43 -to JSXS1[0]
+set_location_assignment PIN_44 -to JSXS1[1]
+set_location_assignment PIN_41 -to JSXS1[2]
+set_location_assignment PIN_42 -to JSXS1[3]
+set_location_assignment PIN_32 -to JSXS1[4]
+set_location_assignment PIN_40 -to JSXS1[5]
+set_location_assignment PIN_30 -to JSXS1[6]
+set_location_assignment PIN_126 -to LED1
+set_location_assignment PIN_129 -to LED2
+set_location_assignment PIN_132 -to LED3
+set_location_assignment PIN_133 -to LED4
+set_location_assignment PIN_119 -to A
+set_location_assignment PIN_79 -to ADD
+set_location_assignment PIN_120 -to B
+set_location_assignment PIN_115 -to C
+set_location_assignment PIN_118 -to D
+set_location_assignment PIN_75 -to EN
+set_location_assignment PIN_18 -to CLK
+set_location_assignment PIN_94 -to CLR
+set_location_assignment PIN_87 -to LDN
+set_location_assignment PIN_92 -to RST
+set_location_assignment PIN_86 -to TA
+set_global_assignment -name VHDL_FILE XZQ/XZQ.vhd
+set_location_assignment PIN_121 -to JF1_A[0]
+set_location_assignment PIN_122 -to JF1_A[1]
+set_location_assignment PIN_52 -to JF1_A[2]
+set_location_assignment PIN_53 -to JF1_A[3]
+set_location_assignment PIN_48 -to JF1_A[4]
+set_location_assignment PIN_51 -to JF1_A[5]
+set_location_assignment PIN_45 -to JF1_A[6]
+set_global_assignment -name VECTOR_WAVEFORM_FILE Block1.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform1.vwf

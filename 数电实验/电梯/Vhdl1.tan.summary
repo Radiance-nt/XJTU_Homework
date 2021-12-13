@@ -1,0 +1,126 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tsu
+Slack          : N/A
+Required Time  : None
+Actual Time    : 7.408 ns
+From           : DOWNIN
+To             : DR[7]
+From Clock     : --
+To Clock       : ST_CH
+Failed Paths   : 0
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 15.877 ns
+From           : LIFTOR[0]
+To             : ST_OUT[1]
+From Clock     : CLKIN
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : 10.217 ns
+From           : UPIN
+To             : UR[16]
+From Clock     : --
+To Clock       : CLKIN
+Failed Paths   : 0
+
+Type           : Clock Setup: 'CLKIN'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 24.50 MHz ( period = 40.822 ns )
+From           : LADD[0]
+To             : LIFTOR[3]
+From Clock     : CLKIN
+To Clock       : CLKIN
+Failed Paths   : 0
+
+Type           : Clock Setup: 'ST_CH'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 83.00 MHz ( period = 12.048 ns )
+From           : LADD[0]
+To             : LADD[0]
+From Clock     : ST_CH
+To Clock       : ST_CH
+Failed Paths   : 0
+
+Type           : Clock Setup: 'UPIN'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 90.56 MHz ( period = 11.043 ns )
+From           : LADD[0]
+To             : LADD[0]
+From Clock     : UPIN
+To Clock       : UPIN
+Failed Paths   : 0
+
+Type           : Clock Setup: 'DOWNIN'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 90.72 MHz ( period = 11.023 ns )
+From           : LADD[0]
+To             : LADD[0]
+From Clock     : DOWNIN
+To Clock       : DOWNIN
+Failed Paths   : 0
+
+Type           : Clock Hold: 'CLKIN'
+Slack          : Not operational: Clock Skew > Data Delay
+Required Time  : None
+Actual Time    : N/A
+From           : LIFTOR[2]
+To             : LADD[0]
+From Clock     : CLKIN
+To Clock       : CLKIN
+Failed Paths   : 293
+
+Type           : Clock Hold: 'ST_CH'
+Slack          : Not operational: Clock Skew > Data Delay
+Required Time  : None
+Actual Time    : N/A
+From           : DR[16]
+To             : LADD[0]
+From Clock     : ST_CH
+To Clock       : ST_CH
+Failed Paths   : 33
+
+Type           : Clock Hold: 'UPIN'
+Slack          : Not operational: Clock Skew > Data Delay
+Required Time  : None
+Actual Time    : N/A
+From           : UR[16]
+To             : LADD[0]
+From Clock     : UPIN
+To Clock       : UPIN
+Failed Paths   : 17
+
+Type           : Clock Hold: 'DOWNIN'
+Slack          : Not operational: Clock Skew > Data Delay
+Required Time  : None
+Actual Time    : N/A
+From           : DR[16]
+To             : LADD[0]
+From Clock     : DOWNIN
+To Clock       : DOWNIN
+Failed Paths   : 17
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 360
+
+--------------------------------------------------------------------------------------
+

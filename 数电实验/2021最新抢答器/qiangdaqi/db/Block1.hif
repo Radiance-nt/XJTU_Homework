@@ -1,0 +1,148 @@
+Version 6.0 Build 178 04/27/2006 SJ Full Version
+11
+729
+OFF
+OFF
+OFF
+OFF
+OFF
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Partition --
+-- End Partition --
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+QDJB
+# storage
+db|Block1.(1).cnf
+db|Block1.(1).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+QDJB.vhd
+b02c9a73c2620863973d8c37c32d57
+4
+# internal_option {
+AUTO_RESOURCE_SHARING
+OFF
+}
+# hierarchies {
+QDJB:inst
+}
+# end
+# entity
+YMQ
+# storage
+db|Block1.(2).cnf
+db|Block1.(2).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+YMQ.vhd
+b4c07d15342172583a6bdcc221a2c7b
+4
+# internal_option {
+AUTO_RESOURCE_SHARING
+OFF
+}
+# hierarchies {
+YMQ:inst16
+YMQ:inst15
+}
+# end
+# entity
+Block1
+# storage
+db|Block1.(0).cnf
+db|Block1.(0).cnf
+# case_insensitive
+# source_file
+Block1.bdf
+ce2be8dbbe878d49756851a18e51d1af
+24
+# hierarchies {
+|
+}
+# end
+# entity
+XZQ
+# storage
+db|Block1.(5).cnf
+db|Block1.(5).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+XZQ|XZQ.vhd
+7da89f6d55709d9430244e6db671109
+4
+# internal_option {
+AUTO_RESOURCE_SHARING
+OFF
+}
+# hierarchies {
+XZQ:inst1
+}
+# end
+# entity
+JFQ
+# storage
+db|Block1.(3).cnf
+db|Block1.(3).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+JFQ.vhd
+4f598b249e4e267c1e1e9755c96b3
+4
+# internal_option {
+AUTO_RESOURCE_SHARING
+OFF
+}
+# hierarchies {
+JFQ:inst4
+}
+# end
+# entity
+JSQ
+# storage
+db|Block1.(4).cnf
+db|Block1.(4).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+JSQ.vhd
+332885f3a62fb5bfa3c7046dd6f8bb
+4
+# internal_option {
+AUTO_RESOURCE_SHARING
+OFF
+}
+# hierarchies {
+JSQ:inst2
+}
+# end
+# complete
+

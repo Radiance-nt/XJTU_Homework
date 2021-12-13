@@ -10,6 +10,7 @@ y2 = LS * pH / ((LS - 1) * pH + 1)
 y1 = pH
 y0 = LN * pH / ((LN - 1) * pH + 1)
 
+
 def func(x):
     y = 0
     if x == 1:
@@ -24,10 +25,13 @@ def func(x):
         y = y1 + (x - pE) * (y2 - y1) / (1 - pE)
     return y
 
+
 vfunc = np.vectorize(func)
 
 x = np.linspace(0, 1, 200)
 res = vfunc(x)
 
-plt.plot(x, res, 'gray', linestyle='-',color='r', marker='')
+plt.plot(x, res, 'gray', linestyle='-', color='r', marker='')
+plt.savefig("test.png")
+
 plt.show()

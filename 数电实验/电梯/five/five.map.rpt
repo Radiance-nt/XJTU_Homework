@@ -1,0 +1,252 @@
+Analysis & Synthesis report for five
+Sun Jan 01 03:14:10 2006
+Version 6.0 Build 178 04/27/2006 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Analysis & Synthesis Source Files Read
+  5. Analysis & Synthesis Resource Usage Summary
+  6. Analysis & Synthesis Resource Utilization by Entity
+  7. General Register Statistics
+  8. Parameter Settings for User Entity Instance: 74163:inst2
+  9. Parameter Settings for User Entity Instance: 74163:inst
+ 10. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2006 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++------------------------------------+------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Sun Jan 01 03:14:10 2006    ;
+; Quartus II Version                 ; 6.0 Build 178 04/27/2006 SJ Full Version ;
+; Revision Name                      ; five                                     ;
+; Top-level Entity Name              ; five                                     ;
+; Family                             ; Cyclone II                               ;
+; Total logic elements               ; 27                                       ;
+; Total registers                    ; 8                                        ;
+; Total pins                         ; 15                                       ;
+; Total virtual pins                 ; 0                                        ;
+; Total memory bits                  ; 0                                        ;
+; Embedded Multiplier 9-bit elements ; 0                                        ;
+; Total PLLs                         ; 0                                        ;
++------------------------------------+------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                ;
++--------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                             ; Setting            ; Default Value      ;
++--------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                             ; EP2C8T144C8        ;                    ;
+; Top-level entity name                                              ; five               ; five               ;
+; Family name                                                        ; Cyclone II         ; Stratix            ;
+; Use smart compilation                                              ; Off                ; Off                ;
+; Restructure Multiplexers                                           ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                ; Off                ; Off                ;
+; Preserve fewer node names                                          ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                          ; Off                ; Off                ;
+; Verilog Version                                                    ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                       ; VHDL93             ; VHDL93             ;
+; State Machine Processing                                           ; Auto               ; Auto               ;
+; Extract Verilog State Machines                                     ; On                 ; On                 ;
+; Extract VHDL State Machines                                        ; On                 ; On                 ;
+; Add Pass-Through Logic to Inferred RAMs                            ; On                 ; On                 ;
+; DSP Block Balancing                                                ; Auto               ; Auto               ;
+; Maximum DSP Block Usage                                            ; Unlimited          ; Unlimited          ;
+; NOT Gate Push-Back                                                 ; On                 ; On                 ;
+; Power-Up Don't Care                                                ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                       ; Off                ; Off                ;
+; Remove Duplicate Registers                                         ; On                 ; On                 ;
+; Ignore CARRY Buffers                                               ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                             ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                              ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                          ; Off                ; Off                ;
+; Ignore LCELL Buffers                                               ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                     ; Off                ; Off                ;
+; Optimization Technique -- Cyclone II                               ; Balanced           ; Balanced           ;
+; Carry Chain Length -- Stratix/Stratix GX/Cyclone/MAX II/Cyclone II ; 70                 ; 70                 ;
+; Auto Carry Chains                                                  ; On                 ; On                 ;
+; Auto Open-Drain Pins                                               ; On                 ; On                 ;
+; Remove Duplicate Logic                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                              ; Off                ; Off                ;
+; Perform gate-level register retiming                               ; Off                ; Off                ;
+; Allow register retiming to trade off Tsu/Tco with Fmax             ; On                 ; On                 ;
+; Auto ROM Replacement                                               ; On                 ; On                 ;
+; Auto RAM Replacement                                               ; On                 ; On                 ;
+; Auto Shift Register Replacement                                    ; On                 ; On                 ;
+; Auto Clock Enable Replacement                                      ; On                 ; On                 ;
+; Allow Synchronous Control Signals                                  ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                             ; Off                ; Off                ;
+; Auto Resource Sharing                                              ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                 ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                 ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                      ; Off                ; Off                ;
+; Maximum Number of M4K Memory Blocks                                ; Unlimited          ; Unlimited          ;
+; Ignore translate_off and translate_on Synthesis Directives         ; Off                ; Off                ;
+; Show Parameter Settings Tables in Synthesis Report                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                 ; Off                ; Off                ;
+; Retiming Meta-Stability Register Sequence Length                   ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                       ; Normal compilation ; Normal compilation ;
+; HDL message level                                                  ; Level2             ; Level2             ;
++--------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                               ;
++----------------------------------+-----------------+------------------------------------+------------------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                               ;
++----------------------------------+-----------------+------------------------------------+------------------------------------------------------------+
+; five.bdf                         ; yes             ; User Block Diagram/Schematic File  ; C:/Documents and Settings/Administrator/×ÀÃæ/five/five.bdf ;
+; 7449.bdf                         ; yes             ; Megafunction                       ; c:/altera/quartus60/libraries/others/maxplus2/7449.bdf     ;
+; 74163.tdf                        ; yes             ; Megafunction                       ; c:/altera/quartus60/libraries/others/maxplus2/74163.tdf    ;
+; aglobal.inc                      ; yes             ; Other                              ; c:/altera/quartus60/libraries/megafunctions/aglobal.inc    ;
+; f74163.bdf                       ; yes             ; Megafunction                       ; c:/altera/quartus60/libraries/others/maxplus2/f74163.bdf   ;
++----------------------------------+-----------------+------------------------------------+------------------------------------------------------------+
+
+
++------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                            ;
++---------------------------------------------+--------------------------+
+; Resource                                    ; Usage                    ;
++---------------------------------------------+--------------------------+
+; Estimated Total logic elements              ; 27                       ;
+; Total combinational functions               ; 27                       ;
+; Logic element usage by number of LUT inputs ;                          ;
+;     -- 4 input functions                    ; 16                       ;
+;     -- 3 input functions                    ; 8                        ;
+;     -- <=2 input functions                  ; 3                        ;
+;         -- Combinational cells for routing  ; 0                        ;
+; Logic elements by mode                      ;                          ;
+;     -- normal mode                          ; 27                       ;
+;     -- arithmetic mode                      ; 0                        ;
+; Total registers                             ; 8                        ;
+; I/O pins                                    ; 15                       ;
+; Maximum fan-out node                        ; 74163:inst|f74163:sub|34 ;
+; Maximum fan-out                             ; 16                       ;
+; Total fan-out                               ; 123                      ;
+; Average fan-out                             ; 2.46                     ;
++---------------------------------------------+--------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                          ;
++----------------------------+-------------------+--------------+-------------+------+--------------+---------+-----------+------+--------------+------------------------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; M4Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name          ;
++----------------------------+-------------------+--------------+-------------+------+--------------+---------+-----------+------+--------------+------------------------------+
+; |five                      ; 27 (3)            ; 8 (0)        ; 0           ; 0    ; 0            ; 0       ; 0         ; 15   ; 0            ; |five                        ;
+;    |74163:inst2|           ; 5 (0)             ; 4 (0)        ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; |five|74163:inst2            ;
+;       |f74163:sub|         ; 5 (5)             ; 4 (4)        ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; |five|74163:inst2|f74163:sub ;
+;    |74163:inst|            ; 4 (0)             ; 4 (0)        ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; |five|74163:inst             ;
+;       |f74163:sub|         ; 4 (4)             ; 4 (4)        ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; |five|74163:inst|f74163:sub  ;
+;    |7449:inst23|           ; 8 (8)             ; 0 (0)        ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; |five|7449:inst23            ;
+;    |7449:inst24|           ; 7 (7)             ; 0 (0)        ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; |five|7449:inst24            ;
++----------------------------+-------------------+--------------+-------------+------+--------------+---------+-----------+------+--------------+------------------------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 8     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: 74163:inst2 ;
++------------------------+------------+--------------------+
+; Parameter Name         ; Value      ; Type               ;
++------------------------+------------+--------------------+
+; DEVICE_FAMILY          ; Cyclone II ; Untyped            ;
+; AUTO_CARRY_CHAINS      ; ON         ; AUTO_CARRY         ;
+; IGNORE_CARRY_BUFFERS   ; OFF        ; IGNORE_CARRY       ;
+; AUTO_CASCADE_CHAINS    ; ON         ; AUTO_CASCADE       ;
+; IGNORE_CASCADE_BUFFERS ; OFF        ; IGNORE_CASCADE     ;
++------------------------+------------+--------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------+
+; Parameter Settings for User Entity Instance: 74163:inst ;
++------------------------+------------+-------------------+
+; Parameter Name         ; Value      ; Type              ;
++------------------------+------------+-------------------+
+; DEVICE_FAMILY          ; Cyclone II ; Untyped           ;
+; AUTO_CARRY_CHAINS      ; ON         ; AUTO_CARRY        ;
+; IGNORE_CARRY_BUFFERS   ; OFF        ; IGNORE_CARRY      ;
+; AUTO_CASCADE_CHAINS    ; ON         ; AUTO_CASCADE      ;
+; IGNORE_CASCADE_BUFFERS ; OFF        ; IGNORE_CASCADE    ;
++------------------------+------------+-------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Analysis & Synthesis
+    Info: Version 6.0 Build 178 04/27/2006 SJ Full Version
+    Info: Processing started: Sun Jan 01 03:14:09 2006
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off five -c five
+Info: Found 1 design units, including 1 entities, in source file five.bdf
+    Info: Found entity 1: five
+Info: Elaborating entity "five" for the top level hierarchy
+Warning: Port "BIN" of type 7449 and instance "inst24" is missing source signal
+Warning: Port "BIN" of type 7449 and instance "inst23" is missing source signal
+Info: Found 1 design units, including 1 entities, in source file ../../../../altera/quartus60/libraries/others/maxplus2/7449.bdf
+    Info: Found entity 1: 7449
+Info: Elaborating entity "7449" for hierarchy "7449:inst24"
+Info: Elaborated megafunction instantiation "7449:inst24"
+Info: Found 1 design units, including 1 entities, in source file ../../../../altera/quartus60/libraries/others/maxplus2/74163.tdf
+    Info: Found entity 1: 74163
+Info: Elaborating entity "74163" for hierarchy "74163:inst2"
+Info: Elaborated megafunction instantiation "74163:inst2"
+Info: Found 1 design units, including 1 entities, in source file ../../../../altera/quartus60/libraries/others/maxplus2/f74163.bdf
+    Info: Found entity 1: f74163
+Info: Elaborating entity "f74163" for hierarchy "74163:inst2|f74163:sub"
+Info: Elaborated megafunction instantiation "74163:inst2|f74163:sub", which is child of megafunction instantiation "74163:inst2"
+Info: Elaborating entity "74163" for hierarchy "74163:inst"
+Info: Elaborated megafunction instantiation "74163:inst"
+Info: Ignored 7 buffer(s)
+    Info: Ignored 7 CARRY buffer(s)
+Info: Implemented 42 device resources after synthesis - the final resource count might be different
+    Info: Implemented 1 input pins
+    Info: Implemented 14 output pins
+    Info: Implemented 27 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 2 warnings
+    Info: Processing ended: Sun Jan 01 03:14:10 2006
+    Info: Elapsed time: 00:00:01
+
+

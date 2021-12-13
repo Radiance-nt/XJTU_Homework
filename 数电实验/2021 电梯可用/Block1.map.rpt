@@ -1,0 +1,359 @@
+Analysis & Synthesis report for Block1
+Sun Jan 01 05:28:05 2006
+Version 6.0 Build 178 04/27/2006 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Analysis & Synthesis Source Files Read
+  5. Analysis & Synthesis Resource Usage Summary
+  6. Analysis & Synthesis Resource Utilization by Entity
+  7. User-Specified and Inferred Latches
+  8. General Register Statistics
+  9. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 10. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2006 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++------------------------------------+------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Sun Jan 01 05:28:05 2006    ;
+; Quartus II Version                 ; 6.0 Build 178 04/27/2006 SJ Full Version ;
+; Revision Name                      ; Block1                                   ;
+; Top-level Entity Name              ; Block1                                   ;
+; Family                             ; Cyclone II                               ;
+; Total logic elements               ; 207                                      ;
+; Total registers                    ; 13                                       ;
+; Total pins                         ; 20                                       ;
+; Total virtual pins                 ; 0                                        ;
+; Total memory bits                  ; 0                                        ;
+; Embedded Multiplier 9-bit elements ; 0                                        ;
+; Total PLLs                         ; 0                                        ;
++------------------------------------+------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                ;
++--------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                             ; Setting            ; Default Value      ;
++--------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                             ; EP2C8T144C8        ;                    ;
+; Top-level entity name                                              ; Block1             ; Block1             ;
+; Family name                                                        ; Cyclone II         ; Stratix            ;
+; Use smart compilation                                              ; Off                ; Off                ;
+; Restructure Multiplexers                                           ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                ; Off                ; Off                ;
+; Preserve fewer node names                                          ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                          ; Off                ; Off                ;
+; Verilog Version                                                    ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                       ; VHDL93             ; VHDL93             ;
+; State Machine Processing                                           ; Auto               ; Auto               ;
+; Extract Verilog State Machines                                     ; On                 ; On                 ;
+; Extract VHDL State Machines                                        ; On                 ; On                 ;
+; Add Pass-Through Logic to Inferred RAMs                            ; On                 ; On                 ;
+; DSP Block Balancing                                                ; Auto               ; Auto               ;
+; Maximum DSP Block Usage                                            ; Unlimited          ; Unlimited          ;
+; NOT Gate Push-Back                                                 ; On                 ; On                 ;
+; Power-Up Don't Care                                                ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                       ; Off                ; Off                ;
+; Remove Duplicate Registers                                         ; On                 ; On                 ;
+; Ignore CARRY Buffers                                               ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                             ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                              ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                          ; Off                ; Off                ;
+; Ignore LCELL Buffers                                               ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                     ; Off                ; Off                ;
+; Optimization Technique -- Cyclone II                               ; Balanced           ; Balanced           ;
+; Carry Chain Length -- Stratix/Stratix GX/Cyclone/MAX II/Cyclone II ; 70                 ; 70                 ;
+; Auto Carry Chains                                                  ; On                 ; On                 ;
+; Auto Open-Drain Pins                                               ; On                 ; On                 ;
+; Remove Duplicate Logic                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                              ; Off                ; Off                ;
+; Perform gate-level register retiming                               ; Off                ; Off                ;
+; Allow register retiming to trade off Tsu/Tco with Fmax             ; On                 ; On                 ;
+; Auto ROM Replacement                                               ; On                 ; On                 ;
+; Auto RAM Replacement                                               ; On                 ; On                 ;
+; Auto Shift Register Replacement                                    ; On                 ; On                 ;
+; Auto Clock Enable Replacement                                      ; On                 ; On                 ;
+; Allow Synchronous Control Signals                                  ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                             ; Off                ; Off                ;
+; Auto Resource Sharing                                              ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                 ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                 ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                      ; Off                ; Off                ;
+; Maximum Number of M4K Memory Blocks                                ; Unlimited          ; Unlimited          ;
+; Ignore translate_off and translate_on Synthesis Directives         ; Off                ; Off                ;
+; Show Parameter Settings Tables in Synthesis Report                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                 ; Off                ; Off                ;
+; Retiming Meta-Stability Register Sequence Length                   ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                       ; Normal compilation ; Normal compilation ;
+; HDL message level                                                  ; Level2             ; Level2             ;
++--------------------------------------------------------------------+--------------------+--------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                       ;
++----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                       ;
++----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------+
+; Block1.bdf                       ; yes             ; User Block Diagram/Schematic File  ; C:/Documents and Settings/Administrator/桌面/电梯2019年/Block1.bdf ;
+; Vhdl1.vhd                        ; yes             ; User VHDL File                     ; C:/Documents and Settings/Administrator/桌面/电梯2019年/Vhdl1.vhd  ;
++----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------+
+
+
++--------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary            ;
++---------------------------------------------+----------+
+; Resource                                    ; Usage    ;
++---------------------------------------------+----------+
+; Estimated Total logic elements              ; 207      ;
+; Total combinational functions               ; 207      ;
+; Logic element usage by number of LUT inputs ;          ;
+;     -- 4 input functions                    ; 154      ;
+;     -- 3 input functions                    ; 26       ;
+;     -- <=2 input functions                  ; 27       ;
+;         -- Combinational cells for routing  ; 0        ;
+; Logic elements by mode                      ;          ;
+;     -- normal mode                          ; 207      ;
+;     -- arithmetic mode                      ; 0        ;
+; Total registers                             ; 13       ;
+; I/O pins                                    ; 20       ;
+; Maximum fan-out node                        ; RUN_STOP ;
+; Maximum fan-out                             ; 34       ;
+; Total fan-out                               ; 788      ;
+; Average fan-out                             ; 3.28     ;
++---------------------------------------------+----------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                 ;
++----------------------------+-------------------+--------------+-------------+------+--------------+---------+-----------+------+--------------+---------------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; M4Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ;
++----------------------------+-------------------+--------------+-------------+------+--------------+---------+-----------+------+--------------+---------------------+
+; |Block1                    ; 207 (0)           ; 13 (0)       ; 0           ; 0    ; 0            ; 0       ; 0         ; 20   ; 0            ; |Block1             ;
+;    |Vhdl1:inst|            ; 207 (207)         ; 13 (13)      ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; |Block1|Vhdl1:inst  ;
++----------------------------+-------------------+--------------+-------------+------+--------------+---------+-----------+------+--------------+---------------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-----------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                 ;
++-----------------------------------------------------+----------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal  ; Free of Timing Hazards ;
++-----------------------------------------------------+----------------------+------------------------+
+; Vhdl1:inst|DR[7]                                    ; Vhdl1:inst|comb~22   ; yes                    ;
+; Vhdl1:inst|UR[7]                                    ; Vhdl1:inst|comb~63   ; yes                    ;
+; Vhdl1:inst|DR[13]                                   ; Vhdl1:inst|comb~40   ; yes                    ;
+; Vhdl1:inst|UR[13]                                   ; Vhdl1:inst|comb~75   ; yes                    ;
+; Vhdl1:inst|DR[5]                                    ; Vhdl1:inst|comb~16   ; yes                    ;
+; Vhdl1:inst|UR[5]                                    ; Vhdl1:inst|comb~59   ; yes                    ;
+; Vhdl1:inst|DR[15]                                   ; Vhdl1:inst|comb~46   ; yes                    ;
+; Vhdl1:inst|UR[15]                                   ; Vhdl1:inst|comb~79   ; yes                    ;
+; Vhdl1:inst|DR[10]                                   ; Vhdl1:inst|comb~31   ; yes                    ;
+; Vhdl1:inst|UR[10]                                   ; Vhdl1:inst|comb~69   ; yes                    ;
+; Vhdl1:inst|DR[4]                                    ; Vhdl1:inst|comb~13   ; yes                    ;
+; Vhdl1:inst|UR[4]                                    ; Vhdl1:inst|comb~57   ; yes                    ;
+; Vhdl1:inst|DR[2]                                    ; Vhdl1:inst|comb~7    ; yes                    ;
+; Vhdl1:inst|UR[2]                                    ; Vhdl1:inst|comb~53   ; yes                    ;
+; Vhdl1:inst|DR[12]                                   ; Vhdl1:inst|comb~37   ; yes                    ;
+; Vhdl1:inst|UR[12]                                   ; Vhdl1:inst|comb~73   ; yes                    ;
+; Vhdl1:inst|DR[3]                                    ; Vhdl1:inst|comb~10   ; yes                    ;
+; Vhdl1:inst|UR[3]                                    ; Vhdl1:inst|comb~55   ; yes                    ;
+; Vhdl1:inst|DR[9]                                    ; Vhdl1:inst|comb~28   ; yes                    ;
+; Vhdl1:inst|UR[9]                                    ; Vhdl1:inst|comb~67   ; yes                    ;
+; Vhdl1:inst|DR[1]                                    ; Vhdl1:inst|comb~4    ; yes                    ;
+; Vhdl1:inst|UR[1]                                    ; Vhdl1:inst|comb~51   ; yes                    ;
+; Vhdl1:inst|DR[11]                                   ; Vhdl1:inst|comb~34   ; yes                    ;
+; Vhdl1:inst|UR[11]                                   ; Vhdl1:inst|comb~71   ; yes                    ;
+; Vhdl1:inst|DR[8]                                    ; Vhdl1:inst|comb~25   ; yes                    ;
+; Vhdl1:inst|UR[8]                                    ; Vhdl1:inst|comb~65   ; yes                    ;
+; Vhdl1:inst|DR[14]                                   ; Vhdl1:inst|comb~43   ; yes                    ;
+; Vhdl1:inst|UR[14]                                   ; Vhdl1:inst|comb~77   ; yes                    ;
+; Vhdl1:inst|DR[6]                                    ; Vhdl1:inst|comb~19   ; yes                    ;
+; Vhdl1:inst|UR[6]                                    ; Vhdl1:inst|comb~61   ; yes                    ;
+; Vhdl1:inst|DR[16]                                   ; Vhdl1:inst|comb~49   ; yes                    ;
+; Vhdl1:inst|UR[16]                                   ; Vhdl1:inst|comb~81   ; yes                    ;
+; Vhdl1:inst|LADD[0]                                  ; Vhdl1:inst|LIFTOR[3] ; yes                    ;
+; Number of user-specified and inferred latches = 33  ;                      ;                        ;
++-----------------------------------------------------+----------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 13    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 3     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------+
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |Block1|Vhdl1:inst|LIFTOR[2] ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |Block1|Vhdl1:inst|WAI_T[3]  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Analysis & Synthesis
+    Info: Version 6.0 Build 178 04/27/2006 SJ Full Version
+    Info: Processing started: Sun Jan 01 05:28:01 2006
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Block1 -c Block1
+Info: Found 1 design units, including 1 entities, in source file Block1.bdf
+    Info: Found entity 1: Block1
+Info: Found 2 design units, including 1 entities, in source file Vhdl1.vhd
+    Info: Found design unit 1: Vhdl1-ART
+    Info: Found entity 1: Vhdl1
+Info: Elaborating entity "Block1" for the top level hierarchy
+Info: Elaborating entity "Vhdl1" for hierarchy "Vhdl1:inst"
+Warning (10492): VHDL Process Statement warning at Vhdl1.vhd(63): signal "DIR" is read inside the Process Statement but isn't in the Process Statement's sensivitity list
+Warning (10631): VHDL Process Statement warning at Vhdl1.vhd(59): inferring latch(es) for signal or variable "UR", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at Vhdl1.vhd(59): inferring latch(es) for signal or variable "DR", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at Vhdl1.vhd(154): inferring latch(es) for signal or variable "LADD", which holds its previous value in one or more paths through the process
+Warning (10492): VHDL Process Statement warning at Vhdl1.vhd(287): signal "CLKIN" is read inside the Process Statement but isn't in the Process Statement's sensivitity list
+Info (10041): Verilog HDL or VHDL info at Vhdl1.vhd(154): inferred latch for "LADD[0]"
+Info (10041): Verilog HDL or VHDL info at Vhdl1.vhd(59): inferred latch for "DR[1]"
+Info (10041): Verilog HDL or VHDL info at Vhdl1.vhd(59): inferred latch for "DR[2]"
+Info (10041): Verilog HDL or VHDL info at Vhdl1.vhd(59): inferred latch for "DR[3]"
+Info (10041): Verilog HDL or VHDL info at Vhdl1.vhd(59): inferred latch for "DR[4]"
+Info (10041): Verilog HDL or VHDL info at Vhdl1.vhd(59): inferred latch for "DR[5]"
+Info (10041): Verilog HDL or VHDL info at Vhdl1.vhd(59): inferred latch for "DR[6]"
+Info (10041): Verilog HDL or VHDL info at Vhdl1.vhd(59): inferred latch for "DR[7]"
+Info (10041): Verilog HDL or VHDL info at Vhdl1.vhd(59): inferred latch for "DR[8]"
+Info (10041): Verilog HDL or VHDL info at Vhdl1.vhd(59): inferred latch for "DR[9]"
+Info (10041): Verilog HDL or VHDL info at Vhdl1.vhd(59): inferred latch for "DR[10]"
+Info (10041): Verilog HDL or VHDL info at Vhdl1.vhd(59): inferred latch for "DR[11]"
+Info (10041): Verilog HDL or VHDL info at Vhdl1.vhd(59): inferred latch for "DR[12]"
+Info (10041): Verilog HDL or VHDL info at Vhdl1.vhd(59): inferred latch for "DR[13]"
+Info (10041): Verilog HDL or VHDL info at Vhdl1.vhd(59): inferred latch for "DR[14]"
+Info (10041): Verilog HDL or VHDL info at Vhdl1.vhd(59): inferred latch for "DR[15]"
+Info (10041): Verilog HDL or VHDL info at Vhdl1.vhd(59): inferred latch for "DR[16]"
+Info (10041): Verilog HDL or VHDL info at Vhdl1.vhd(59): inferred latch for "UR[1]"
+Info (10041): Verilog HDL or VHDL info at Vhdl1.vhd(59): inferred latch for "UR[2]"
+Info (10041): Verilog HDL or VHDL info at Vhdl1.vhd(59): inferred latch for "UR[3]"
+Info (10041): Verilog HDL or VHDL info at Vhdl1.vhd(59): inferred latch for "UR[4]"
+Info (10041): Verilog HDL or VHDL info at Vhdl1.vhd(59): inferred latch for "UR[5]"
+Info (10041): Verilog HDL or VHDL info at Vhdl1.vhd(59): inferred latch for "UR[6]"
+Info (10041): Verilog HDL or VHDL info at Vhdl1.vhd(59): inferred latch for "UR[7]"
+Info (10041): Verilog HDL or VHDL info at Vhdl1.vhd(59): inferred latch for "UR[8]"
+Info (10041): Verilog HDL or VHDL info at Vhdl1.vhd(59): inferred latch for "UR[9]"
+Info (10041): Verilog HDL or VHDL info at Vhdl1.vhd(59): inferred latch for "UR[10]"
+Info (10041): Verilog HDL or VHDL info at Vhdl1.vhd(59): inferred latch for "UR[11]"
+Info (10041): Verilog HDL or VHDL info at Vhdl1.vhd(59): inferred latch for "UR[12]"
+Info (10041): Verilog HDL or VHDL info at Vhdl1.vhd(59): inferred latch for "UR[13]"
+Info (10041): Verilog HDL or VHDL info at Vhdl1.vhd(59): inferred latch for "UR[14]"
+Info (10041): Verilog HDL or VHDL info at Vhdl1.vhd(59): inferred latch for "UR[15]"
+Info (10041): Verilog HDL or VHDL info at Vhdl1.vhd(59): inferred latch for "UR[16]"
+Warning: Latch Vhdl1:inst|DR[7] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal Vhdl1:inst|DIR[0]
+Warning: Latch Vhdl1:inst|UR[7] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal Vhdl1:inst|DIR[0]
+Warning: Latch Vhdl1:inst|DR[13] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal Vhdl1:inst|DIR[0]
+Warning: Latch Vhdl1:inst|UR[13] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal Vhdl1:inst|DIR[0]
+Warning: Latch Vhdl1:inst|DR[5] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal Vhdl1:inst|DIR[0]
+Warning: Latch Vhdl1:inst|UR[5] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal Vhdl1:inst|DIR[0]
+Warning: Latch Vhdl1:inst|DR[15] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal Vhdl1:inst|DIR[0]
+Warning: Latch Vhdl1:inst|UR[15] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal Vhdl1:inst|DIR[0]
+Warning: Latch Vhdl1:inst|DR[10] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal Vhdl1:inst|DIR[0]
+Warning: Latch Vhdl1:inst|UR[10] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal Vhdl1:inst|DIR[0]
+Warning: Latch Vhdl1:inst|DR[4] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal Vhdl1:inst|DIR[0]
+Warning: Latch Vhdl1:inst|UR[4] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal Vhdl1:inst|DIR[0]
+Warning: Latch Vhdl1:inst|DR[2] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal Vhdl1:inst|DIR[0]
+Warning: Latch Vhdl1:inst|UR[2] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal Vhdl1:inst|DIR[0]
+Warning: Latch Vhdl1:inst|DR[12] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal Vhdl1:inst|DIR[0]
+Warning: Latch Vhdl1:inst|UR[12] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal Vhdl1:inst|DIR[0]
+Warning: Latch Vhdl1:inst|DR[3] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal Vhdl1:inst|DIR[0]
+Warning: Latch Vhdl1:inst|UR[3] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal Vhdl1:inst|DIR[0]
+Warning: Latch Vhdl1:inst|DR[9] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal Vhdl1:inst|DIR[0]
+Warning: Latch Vhdl1:inst|UR[9] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal Vhdl1:inst|DIR[0]
+Warning: Latch Vhdl1:inst|DR[1] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal Vhdl1:inst|DIR[0]
+Warning: Latch Vhdl1:inst|UR[1] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal Vhdl1:inst|DIR[0]
+Warning: Latch Vhdl1:inst|DR[11] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal Vhdl1:inst|DIR[0]
+Warning: Latch Vhdl1:inst|UR[11] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal Vhdl1:inst|DIR[0]
+Warning: Latch Vhdl1:inst|DR[8] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal Vhdl1:inst|DIR[0]
+Warning: Latch Vhdl1:inst|UR[8] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal Vhdl1:inst|DIR[0]
+Warning: Latch Vhdl1:inst|DR[14] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal Vhdl1:inst|DIR[0]
+Warning: Latch Vhdl1:inst|UR[14] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal Vhdl1:inst|DIR[0]
+Warning: Latch Vhdl1:inst|DR[6] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal Vhdl1:inst|DIR[0]
+Warning: Latch Vhdl1:inst|UR[6] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal Vhdl1:inst|DIR[0]
+Warning: Latch Vhdl1:inst|DR[16] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal Vhdl1:inst|DIR[0]
+Warning: Latch Vhdl1:inst|UR[16] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal Vhdl1:inst|DIR[0]
+Warning: Latch Vhdl1:inst|LADD[0] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal Vhdl1:inst|LIFTOR[1]
+Info: Implemented 231 device resources after synthesis - the final resource count might be different
+    Info: Implemented 7 input pins
+    Info: Implemented 13 output pins
+    Info: Implemented 211 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 71 warnings
+    Info: Processing ended: Sun Jan 01 05:28:05 2006
+    Info: Elapsed time: 00:00:04
+
+

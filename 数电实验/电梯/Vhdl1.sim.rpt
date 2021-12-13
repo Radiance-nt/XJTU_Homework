@@ -1,0 +1,574 @@
+Simulator report for Vhdl1
+Sun Jan 01 02:32:06 2006
+Version 6.0 Build 178 04/27/2006 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2006 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 100.0 us     ;
+; Simulation Netlist Size     ; 246 nodes    ;
+; Simulation Coverage         ;      30.49 % ;
+; Total Number of Transitions ; 3364         ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone II   ;
+; Device                      ; EP2C8T144C8  ;
++-----------------------------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                      ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Option                                                                                     ; Setting    ; Default Value ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Simulation mode                                                                            ; Timing     ; Timing        ;
+; Start time                                                                                 ; 0 ns       ; 0 ns          ;
+; Add pins automatically to simulation output waveforms                                      ; On         ; On            ;
+; Check outputs                                                                              ; Off        ; Off           ;
+; Report simulation coverage                                                                 ; On         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On         ; On            ;
+; Display missing 1-value coverage report                                                    ; On         ; On            ;
+; Display missing 0-value coverage report                                                    ; On         ; On            ;
+; Detect setup and hold time violations                                                      ; Off        ; Off           ;
+; Detect glitches                                                                            ; Off        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off        ; Off           ;
+; Generate Signal Activity File                                                              ; Off        ; Off           ;
+; Group bus channels in simulation results                                                   ; Off        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off        ;               ;
+; Glitch Filtering                                                                           ; Off        ; Off           ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      30.49 % ;
+; Total nodes checked                                 ; 246          ;
+; Total output ports checked                          ; 246          ;
+; Total output ports with complete 1/0-value coverage ; 75           ;
+; Total output ports with no 1/0-value coverage       ; 171          ;
+; Total output ports with no 1-value coverage         ; 171          ;
+; Total output ports with no 0-value coverage         ; 171          ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                  ;
++-----------------------------+-----------------------------+------------------+
+; Node Name                   ; Output Port Name            ; Output Port Type ;
++-----------------------------+-----------------------------+------------------+
+; |Vhdl1|WAI_T[0]             ; |Vhdl1|WAI_T[0]             ; regout           ;
+; |Vhdl1|WAI_T[1]             ; |Vhdl1|WAI_T[1]             ; regout           ;
+; |Vhdl1|WAI_T[2]             ; |Vhdl1|WAI_T[2]             ; regout           ;
+; |Vhdl1|DIR[0]               ; |Vhdl1|DIR[0]               ; regout           ;
+; |Vhdl1|DIR[1]               ; |Vhdl1|DIR[1]               ; regout           ;
+; |Vhdl1|Add0~148             ; |Vhdl1|Add0~148             ; combout          ;
+; |Vhdl1|DIR[2]               ; |Vhdl1|DIR[2]               ; regout           ;
+; |Vhdl1|Add0~149             ; |Vhdl1|Add0~149             ; combout          ;
+; |Vhdl1|DIR[3]               ; |Vhdl1|DIR[3]               ; regout           ;
+; |Vhdl1|Add0~150             ; |Vhdl1|Add0~150             ; combout          ;
+; |Vhdl1|WAI_T~242            ; |Vhdl1|WAI_T~242            ; combout          ;
+; |Vhdl1|WAI_T~243            ; |Vhdl1|WAI_T~243            ; combout          ;
+; |Vhdl1|WAI_T~244            ; |Vhdl1|WAI_T~244            ; combout          ;
+; |Vhdl1|LIFTOR[2]~900        ; |Vhdl1|LIFTOR[2]~900        ; combout          ;
+; |Vhdl1|WAI_T~245            ; |Vhdl1|WAI_T~245            ; combout          ;
+; |Vhdl1|LIFTOR[2]~901        ; |Vhdl1|LIFTOR[2]~901        ; combout          ;
+; |Vhdl1|WAI_T~246            ; |Vhdl1|WAI_T~246            ; combout          ;
+; |Vhdl1|Equal1~28            ; |Vhdl1|Equal1~28            ; combout          ;
+; |Vhdl1|P2~703               ; |Vhdl1|P2~703               ; combout          ;
+; |Vhdl1|P2~704               ; |Vhdl1|P2~704               ; combout          ;
+; |Vhdl1|P2~705               ; |Vhdl1|P2~705               ; combout          ;
+; |Vhdl1|Add0~151             ; |Vhdl1|Add0~151             ; combout          ;
+; |Vhdl1|P2~706               ; |Vhdl1|P2~706               ; combout          ;
+; |Vhdl1|HAND~21              ; |Vhdl1|HAND~21              ; combout          ;
+; |Vhdl1|comb~668             ; |Vhdl1|comb~668             ; combout          ;
+; |Vhdl1|Mux49~144            ; |Vhdl1|Mux49~144            ; combout          ;
+; |Vhdl1|P2~708               ; |Vhdl1|P2~708               ; combout          ;
+; |Vhdl1|P2~709               ; |Vhdl1|P2~709               ; combout          ;
+; |Vhdl1|P2~710               ; |Vhdl1|P2~710               ; combout          ;
+; |Vhdl1|P2~711               ; |Vhdl1|P2~711               ; combout          ;
+; |Vhdl1|comb~671             ; |Vhdl1|comb~671             ; combout          ;
+; |Vhdl1|P2~712               ; |Vhdl1|P2~712               ; combout          ;
+; |Vhdl1|comb~672             ; |Vhdl1|comb~672             ; combout          ;
+; |Vhdl1|comb~674             ; |Vhdl1|comb~674             ; combout          ;
+; |Vhdl1|Mux49~145            ; |Vhdl1|Mux49~145            ; combout          ;
+; |Vhdl1|comb~677             ; |Vhdl1|comb~677             ; combout          ;
+; |Vhdl1|comb~678             ; |Vhdl1|comb~678             ; combout          ;
+; |Vhdl1|Mux49~146            ; |Vhdl1|Mux49~146            ; combout          ;
+; |Vhdl1|Mux49~147            ; |Vhdl1|Mux49~147            ; combout          ;
+; |Vhdl1|comb~687             ; |Vhdl1|comb~687             ; combout          ;
+; |Vhdl1|Mux49~148            ; |Vhdl1|Mux49~148            ; combout          ;
+; |Vhdl1|comb~689             ; |Vhdl1|comb~689             ; combout          ;
+; |Vhdl1|comb~690             ; |Vhdl1|comb~690             ; combout          ;
+; |Vhdl1|comb~691             ; |Vhdl1|comb~691             ; combout          ;
+; |Vhdl1|Mux17~21             ; |Vhdl1|Mux17~21             ; combout          ;
+; |Vhdl1|Mux9~21              ; |Vhdl1|Mux9~21              ; combout          ;
+; |Vhdl1|Mux49~149            ; |Vhdl1|Mux49~149            ; combout          ;
+; |Vhdl1|comb~698             ; |Vhdl1|comb~698             ; combout          ;
+; |Vhdl1|Mux49~150            ; |Vhdl1|Mux49~150            ; combout          ;
+; |Vhdl1|Mux49~151            ; |Vhdl1|Mux49~151            ; combout          ;
+; |Vhdl1|comb~704             ; |Vhdl1|comb~704             ; combout          ;
+; |Vhdl1|Mux5~21              ; |Vhdl1|Mux5~21              ; combout          ;
+; |Vhdl1|comb~706             ; |Vhdl1|comb~706             ; combout          ;
+; |Vhdl1|comb~707             ; |Vhdl1|comb~707             ; combout          ;
+; |Vhdl1|comb~708             ; |Vhdl1|comb~708             ; combout          ;
+; |Vhdl1|Mux49~152            ; |Vhdl1|Mux49~152            ; combout          ;
+; |Vhdl1|comb~711             ; |Vhdl1|comb~711             ; combout          ;
+; |Vhdl1|Mux33~21             ; |Vhdl1|Mux33~21             ; combout          ;
+; |Vhdl1|Mux49~153            ; |Vhdl1|Mux49~153            ; combout          ;
+; |Vhdl1|Mux49~154            ; |Vhdl1|Mux49~154            ; combout          ;
+; |Vhdl1|DIR[0]~36            ; |Vhdl1|DIR[0]~36            ; combout          ;
+; |Vhdl1|CLKIN                ; |Vhdl1|CLKIN                ; combout          ;
+; |Vhdl1|CLOSE                ; |Vhdl1|CLOSE                ; combout          ;
+; |Vhdl1|RUN_STOP             ; |Vhdl1|RUN_STOP             ; combout          ;
+; |Vhdl1|ST_CH                ; |Vhdl1|ST_CH                ; combout          ;
+; |Vhdl1|RUN_WAIT[0]          ; |Vhdl1|RUN_WAIT[0]          ; padio            ;
+; |Vhdl1|RUN_WAIT[1]          ; |Vhdl1|RUN_WAIT[1]          ; padio            ;
+; |Vhdl1|RUN_WAIT[2]          ; |Vhdl1|RUN_WAIT[2]          ; padio            ;
+; |Vhdl1|DIRECT[0]            ; |Vhdl1|DIRECT[0]            ; padio            ;
+; |Vhdl1|DIRECT[1]            ; |Vhdl1|DIRECT[1]            ; padio            ;
+; |Vhdl1|DIRECT[2]            ; |Vhdl1|DIRECT[2]            ; padio            ;
+; |Vhdl1|DIRECT[3]            ; |Vhdl1|DIRECT[3]            ; padio            ;
+; |Vhdl1|CLKIN~clk_delay_ctrl ; |Vhdl1|CLKIN~clk_delay_ctrl ; clkout           ;
+; |Vhdl1|DIR[0]~clkctrl       ; |Vhdl1|DIR[0]~clkctrl       ; outclk           ;
+; |Vhdl1|CLKIN~clkctrl        ; |Vhdl1|CLKIN~clkctrl        ; outclk           ;
++-----------------------------+-----------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++----------------------------------------------------------------+
+; Missing 1-Value Coverage                                       ;
++----------------------+----------------------+------------------+
+; Node Name            ; Output Port Name     ; Output Port Type ;
++----------------------+----------------------+------------------+
+; |Vhdl1|LAMP~reg0     ; |Vhdl1|LAMP~reg0     ; regout           ;
+; |Vhdl1|LIFTOR[0]     ; |Vhdl1|LIFTOR[0]     ; regout           ;
+; |Vhdl1|LIFTOR[1]     ; |Vhdl1|LIFTOR[1]     ; regout           ;
+; |Vhdl1|Add1~136      ; |Vhdl1|Add1~136      ; combout          ;
+; |Vhdl1|LIFTOR[2]     ; |Vhdl1|LIFTOR[2]     ; regout           ;
+; |Vhdl1|Add1~137      ; |Vhdl1|Add1~137      ; combout          ;
+; |Vhdl1|LIFTOR[3]     ; |Vhdl1|LIFTOR[3]     ; regout           ;
+; |Vhdl1|Add1~138      ; |Vhdl1|Add1~138      ; combout          ;
+; |Vhdl1|LIFTOR[2]~902 ; |Vhdl1|LIFTOR[2]~902 ; combout          ;
+; |Vhdl1|LIFTOR~903    ; |Vhdl1|LIFTOR~903    ; combout          ;
+; |Vhdl1|Equal17~13    ; |Vhdl1|Equal17~13    ; combout          ;
+; |Vhdl1|LIFTOR~904    ; |Vhdl1|LIFTOR~904    ; combout          ;
+; |Vhdl1|LIFTOR~905    ; |Vhdl1|LIFTOR~905    ; combout          ;
+; |Vhdl1|LIFTOR[3]~906 ; |Vhdl1|LIFTOR[3]~906 ; combout          ;
+; |Vhdl1|P3~16         ; |Vhdl1|P3~16         ; combout          ;
+; |Vhdl1|P3~34         ; |Vhdl1|P3~34         ; combout          ;
+; |Vhdl1|P3~10         ; |Vhdl1|P3~10         ; combout          ;
+; |Vhdl1|Mux0~55       ; |Vhdl1|Mux0~55       ; combout          ;
+; |Vhdl1|P3~40         ; |Vhdl1|P3~40         ; combout          ;
+; |Vhdl1|Mux0~56       ; |Vhdl1|Mux0~56       ; combout          ;
+; |Vhdl1|P3~25         ; |Vhdl1|P3~25         ; combout          ;
+; |Vhdl1|P3~7          ; |Vhdl1|P3~7          ; combout          ;
+; |Vhdl1|P3~1          ; |Vhdl1|P3~1          ; combout          ;
+; |Vhdl1|Mux0~57       ; |Vhdl1|Mux0~57       ; combout          ;
+; |Vhdl1|P3~31         ; |Vhdl1|P3~31         ; combout          ;
+; |Vhdl1|Mux0~58       ; |Vhdl1|Mux0~58       ; combout          ;
+; |Vhdl1|P3~4          ; |Vhdl1|P3~4          ; combout          ;
+; |Vhdl1|P3~22         ; |Vhdl1|P3~22         ; combout          ;
+; |Vhdl1|P3~0          ; |Vhdl1|P3~0          ; combout          ;
+; |Vhdl1|Mux0~59       ; |Vhdl1|Mux0~59       ; combout          ;
+; |Vhdl1|P3~28         ; |Vhdl1|P3~28         ; combout          ;
+; |Vhdl1|Mux0~60       ; |Vhdl1|Mux0~60       ; combout          ;
+; |Vhdl1|Mux0~61       ; |Vhdl1|Mux0~61       ; combout          ;
+; |Vhdl1|P3~19         ; |Vhdl1|P3~19         ; combout          ;
+; |Vhdl1|P3~37         ; |Vhdl1|P3~37         ; combout          ;
+; |Vhdl1|P3~13         ; |Vhdl1|P3~13         ; combout          ;
+; |Vhdl1|Mux0~62       ; |Vhdl1|Mux0~62       ; combout          ;
+; |Vhdl1|P3~43         ; |Vhdl1|P3~43         ; combout          ;
+; |Vhdl1|Mux0~63       ; |Vhdl1|Mux0~63       ; combout          ;
+; |Vhdl1|Mux0~64       ; |Vhdl1|Mux0~64       ; combout          ;
+; |Vhdl1|Equal2~57     ; |Vhdl1|Equal2~57     ; combout          ;
+; |Vhdl1|Mux1~1102     ; |Vhdl1|Mux1~1102     ; combout          ;
+; |Vhdl1|Mux1~1103     ; |Vhdl1|Mux1~1103     ; combout          ;
+; |Vhdl1|P3~1175       ; |Vhdl1|P3~1175       ; combout          ;
+; |Vhdl1|Mux1~1104     ; |Vhdl1|Mux1~1104     ; combout          ;
+; |Vhdl1|Equal2~58     ; |Vhdl1|Equal2~58     ; combout          ;
+; |Vhdl1|Equal2~59     ; |Vhdl1|Equal2~59     ; combout          ;
+; |Vhdl1|comb~666      ; |Vhdl1|comb~666      ; combout          ;
+; |Vhdl1|LessThan7~94  ; |Vhdl1|LessThan7~94  ; combout          ;
+; |Vhdl1|P3~15         ; |Vhdl1|P3~15         ; combout          ;
+; |Vhdl1|Equal10~34    ; |Vhdl1|Equal10~34    ; combout          ;
+; |Vhdl1|Equal10~35    ; |Vhdl1|Equal10~35    ; combout          ;
+; |Vhdl1|P3~1176       ; |Vhdl1|P3~1176       ; combout          ;
+; |Vhdl1|P3~1177       ; |Vhdl1|P3~1177       ; combout          ;
+; |Vhdl1|Equal2~60     ; |Vhdl1|Equal2~60     ; combout          ;
+; |Vhdl1|P3~3          ; |Vhdl1|P3~3          ; combout          ;
+; |Vhdl1|Mux1~1105     ; |Vhdl1|Mux1~1105     ; combout          ;
+; |Vhdl1|Equal14~31    ; |Vhdl1|Equal14~31    ; combout          ;
+; |Vhdl1|P3~1178       ; |Vhdl1|P3~1178       ; combout          ;
+; |Vhdl1|Mux1~1106     ; |Vhdl1|Mux1~1106     ; combout          ;
+; |Vhdl1|P3~18         ; |Vhdl1|P3~18         ; combout          ;
+; |Vhdl1|P3~1179       ; |Vhdl1|P3~1179       ; combout          ;
+; |Vhdl1|P3~6          ; |Vhdl1|P3~6          ; combout          ;
+; |Vhdl1|Mux1~1107     ; |Vhdl1|Mux1~1107     ; combout          ;
+; |Vhdl1|P3~42         ; |Vhdl1|P3~42         ; combout          ;
+; |Vhdl1|Mux1~1108     ; |Vhdl1|Mux1~1108     ; combout          ;
+; |Vhdl1|Mux1~1109     ; |Vhdl1|Mux1~1109     ; combout          ;
+; |Vhdl1|Mux1~1110     ; |Vhdl1|Mux1~1110     ; combout          ;
+; |Vhdl1|Mux1~1111     ; |Vhdl1|Mux1~1111     ; combout          ;
+; |Vhdl1|Mux1~1112     ; |Vhdl1|Mux1~1112     ; combout          ;
+; |Vhdl1|Mux1~1113     ; |Vhdl1|Mux1~1113     ; combout          ;
+; |Vhdl1|Mux1~1114     ; |Vhdl1|Mux1~1114     ; combout          ;
+; |Vhdl1|Mux1~1115     ; |Vhdl1|Mux1~1115     ; combout          ;
+; |Vhdl1|Mux1~1116     ; |Vhdl1|Mux1~1116     ; combout          ;
+; |Vhdl1|Mux1~1117     ; |Vhdl1|Mux1~1117     ; combout          ;
+; |Vhdl1|Mux1~1118     ; |Vhdl1|Mux1~1118     ; combout          ;
+; |Vhdl1|Mux1~1119     ; |Vhdl1|Mux1~1119     ; combout          ;
+; |Vhdl1|Mux1~1120     ; |Vhdl1|Mux1~1120     ; combout          ;
+; |Vhdl1|Mux1~1121     ; |Vhdl1|Mux1~1121     ; combout          ;
+; |Vhdl1|Mux1~1122     ; |Vhdl1|Mux1~1122     ; combout          ;
+; |Vhdl1|comb~2        ; |Vhdl1|comb~2        ; combout          ;
+; |Vhdl1|Add1~139      ; |Vhdl1|Add1~139      ; combout          ;
+; |Vhdl1|comb~667      ; |Vhdl1|comb~667      ; combout          ;
+; |Vhdl1|P2~707        ; |Vhdl1|P2~707        ; combout          ;
+; |Vhdl1|comb~669      ; |Vhdl1|comb~669      ; combout          ;
+; |Vhdl1|comb~670      ; |Vhdl1|comb~670      ; combout          ;
+; |Vhdl1|comb~673      ; |Vhdl1|comb~673      ; combout          ;
+; |Vhdl1|comb~675      ; |Vhdl1|comb~675      ; combout          ;
+; |Vhdl1|comb~676      ; |Vhdl1|comb~676      ; combout          ;
+; |Vhdl1|comb~679      ; |Vhdl1|comb~679      ; combout          ;
+; |Vhdl1|comb~680      ; |Vhdl1|comb~680      ; combout          ;
+; |Vhdl1|comb~681      ; |Vhdl1|comb~681      ; combout          ;
+; |Vhdl1|comb~682      ; |Vhdl1|comb~682      ; combout          ;
+; |Vhdl1|comb~683      ; |Vhdl1|comb~683      ; combout          ;
+; |Vhdl1|comb~684      ; |Vhdl1|comb~684      ; combout          ;
+; |Vhdl1|comb~685      ; |Vhdl1|comb~685      ; combout          ;
+; |Vhdl1|comb~686      ; |Vhdl1|comb~686      ; combout          ;
+; |Vhdl1|comb~688      ; |Vhdl1|comb~688      ; combout          ;
+; |Vhdl1|Mux15~21      ; |Vhdl1|Mux15~21      ; combout          ;
+; |Vhdl1|comb~692      ; |Vhdl1|comb~692      ; combout          ;
+; |Vhdl1|comb~693      ; |Vhdl1|comb~693      ; combout          ;
+; |Vhdl1|Mux7~21       ; |Vhdl1|Mux7~21       ; combout          ;
+; |Vhdl1|comb~694      ; |Vhdl1|comb~694      ; combout          ;
+; |Vhdl1|comb~695      ; |Vhdl1|comb~695      ; combout          ;
+; |Vhdl1|comb~696      ; |Vhdl1|comb~696      ; combout          ;
+; |Vhdl1|comb~697      ; |Vhdl1|comb~697      ; combout          ;
+; |Vhdl1|comb~699      ; |Vhdl1|comb~699      ; combout          ;
+; |Vhdl1|comb~700      ; |Vhdl1|comb~700      ; combout          ;
+; |Vhdl1|comb~701      ; |Vhdl1|comb~701      ; combout          ;
+; |Vhdl1|comb~702      ; |Vhdl1|comb~702      ; combout          ;
+; |Vhdl1|comb~703      ; |Vhdl1|comb~703      ; combout          ;
+; |Vhdl1|comb~705      ; |Vhdl1|comb~705      ; combout          ;
+; |Vhdl1|Mux3~21       ; |Vhdl1|Mux3~21       ; combout          ;
+; |Vhdl1|comb~709      ; |Vhdl1|comb~709      ; combout          ;
+; |Vhdl1|comb~710      ; |Vhdl1|comb~710      ; combout          ;
+; |Vhdl1|Mux31~21      ; |Vhdl1|Mux31~21      ; combout          ;
+; |Vhdl1|comb~712      ; |Vhdl1|comb~712      ; combout          ;
+; |Vhdl1|comb~713      ; |Vhdl1|comb~713      ; combout          ;
+; |Vhdl1|comb~714      ; |Vhdl1|comb~714      ; combout          ;
+; |Vhdl1|comb~715      ; |Vhdl1|comb~715      ; combout          ;
+; |Vhdl1|comb~716      ; |Vhdl1|comb~716      ; combout          ;
+; |Vhdl1|comb~717      ; |Vhdl1|comb~717      ; combout          ;
+; |Vhdl1|comb~718      ; |Vhdl1|comb~718      ; combout          ;
+; |Vhdl1|comb~719      ; |Vhdl1|comb~719      ; combout          ;
+; |Vhdl1|comb~720      ; |Vhdl1|comb~720      ; combout          ;
+; |Vhdl1|comb~721      ; |Vhdl1|comb~721      ; combout          ;
+; |Vhdl1|Equal6~19     ; |Vhdl1|Equal6~19     ; combout          ;
+; |Vhdl1|LIFTOR[0]~907 ; |Vhdl1|LIFTOR[0]~907 ; combout          ;
+; |Vhdl1|LADD[1]       ; |Vhdl1|LADD[1]       ; combout          ;
+; |Vhdl1|LADD[0]       ; |Vhdl1|LADD[0]       ; combout          ;
+; |Vhdl1|DR[7]         ; |Vhdl1|DR[7]         ; combout          ;
+; |Vhdl1|UR[7]         ; |Vhdl1|UR[7]         ; combout          ;
+; |Vhdl1|DR[13]        ; |Vhdl1|DR[13]        ; combout          ;
+; |Vhdl1|UR[13]        ; |Vhdl1|UR[13]        ; combout          ;
+; |Vhdl1|DR[5]         ; |Vhdl1|DR[5]         ; combout          ;
+; |Vhdl1|UR[5]         ; |Vhdl1|UR[5]         ; combout          ;
+; |Vhdl1|DR[15]        ; |Vhdl1|DR[15]        ; combout          ;
+; |Vhdl1|UR[15]        ; |Vhdl1|UR[15]        ; combout          ;
+; |Vhdl1|DR[10]        ; |Vhdl1|DR[10]        ; combout          ;
+; |Vhdl1|UR[10]        ; |Vhdl1|UR[10]        ; combout          ;
+; |Vhdl1|DR[4]         ; |Vhdl1|DR[4]         ; combout          ;
+; |Vhdl1|UR[4]         ; |Vhdl1|UR[4]         ; combout          ;
+; |Vhdl1|DR[2]         ; |Vhdl1|DR[2]         ; combout          ;
+; |Vhdl1|UR[2]         ; |Vhdl1|UR[2]         ; combout          ;
+; |Vhdl1|DR[12]        ; |Vhdl1|DR[12]        ; combout          ;
+; |Vhdl1|UR[12]        ; |Vhdl1|UR[12]        ; combout          ;
+; |Vhdl1|DR[3]         ; |Vhdl1|DR[3]         ; combout          ;
+; |Vhdl1|UR[3]         ; |Vhdl1|UR[3]         ; combout          ;
+; |Vhdl1|DR[9]         ; |Vhdl1|DR[9]         ; combout          ;
+; |Vhdl1|UR[9]         ; |Vhdl1|UR[9]         ; combout          ;
+; |Vhdl1|DR[1]         ; |Vhdl1|DR[1]         ; combout          ;
+; |Vhdl1|UR[1]         ; |Vhdl1|UR[1]         ; combout          ;
+; |Vhdl1|DR[11]        ; |Vhdl1|DR[11]        ; combout          ;
+; |Vhdl1|UR[11]        ; |Vhdl1|UR[11]        ; combout          ;
+; |Vhdl1|DR[8]         ; |Vhdl1|DR[8]         ; combout          ;
+; |Vhdl1|UR[8]         ; |Vhdl1|UR[8]         ; combout          ;
+; |Vhdl1|DR[14]        ; |Vhdl1|DR[14]        ; combout          ;
+; |Vhdl1|UR[14]        ; |Vhdl1|UR[14]        ; combout          ;
+; |Vhdl1|DR[6]         ; |Vhdl1|DR[6]         ; combout          ;
+; |Vhdl1|UR[6]         ; |Vhdl1|UR[6]         ; combout          ;
+; |Vhdl1|DR[16]        ; |Vhdl1|DR[16]        ; combout          ;
+; |Vhdl1|UR[16]        ; |Vhdl1|UR[16]        ; combout          ;
+; |Vhdl1|DELAY         ; |Vhdl1|DELAY         ; combout          ;
+; |Vhdl1|DOWNIN        ; |Vhdl1|DOWNIN        ; combout          ;
+; |Vhdl1|UPIN          ; |Vhdl1|UPIN          ; combout          ;
+; |Vhdl1|LAMP          ; |Vhdl1|LAMP          ; padio            ;
+; |Vhdl1|RUN_WAIT[3]   ; |Vhdl1|RUN_WAIT[3]   ; padio            ;
+; |Vhdl1|ST_OUT[0]     ; |Vhdl1|ST_OUT[0]     ; padio            ;
+; |Vhdl1|ST_OUT[1]     ; |Vhdl1|ST_OUT[1]     ; padio            ;
+; |Vhdl1|ST_OUT[2]     ; |Vhdl1|ST_OUT[2]     ; padio            ;
+; |Vhdl1|ST_OUT[3]     ; |Vhdl1|ST_OUT[3]     ; padio            ;
++----------------------+----------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++----------------------------------------------------------------+
+; Missing 0-Value Coverage                                       ;
++----------------------+----------------------+------------------+
+; Node Name            ; Output Port Name     ; Output Port Type ;
++----------------------+----------------------+------------------+
+; |Vhdl1|LAMP~reg0     ; |Vhdl1|LAMP~reg0     ; regout           ;
+; |Vhdl1|LIFTOR[0]     ; |Vhdl1|LIFTOR[0]     ; regout           ;
+; |Vhdl1|LIFTOR[1]     ; |Vhdl1|LIFTOR[1]     ; regout           ;
+; |Vhdl1|Add1~136      ; |Vhdl1|Add1~136      ; combout          ;
+; |Vhdl1|LIFTOR[2]     ; |Vhdl1|LIFTOR[2]     ; regout           ;
+; |Vhdl1|Add1~137      ; |Vhdl1|Add1~137      ; combout          ;
+; |Vhdl1|LIFTOR[3]     ; |Vhdl1|LIFTOR[3]     ; regout           ;
+; |Vhdl1|Add1~138      ; |Vhdl1|Add1~138      ; combout          ;
+; |Vhdl1|LIFTOR[2]~902 ; |Vhdl1|LIFTOR[2]~902 ; combout          ;
+; |Vhdl1|LIFTOR~903    ; |Vhdl1|LIFTOR~903    ; combout          ;
+; |Vhdl1|Equal17~13    ; |Vhdl1|Equal17~13    ; combout          ;
+; |Vhdl1|LIFTOR~904    ; |Vhdl1|LIFTOR~904    ; combout          ;
+; |Vhdl1|LIFTOR~905    ; |Vhdl1|LIFTOR~905    ; combout          ;
+; |Vhdl1|LIFTOR[3]~906 ; |Vhdl1|LIFTOR[3]~906 ; combout          ;
+; |Vhdl1|P3~16         ; |Vhdl1|P3~16         ; combout          ;
+; |Vhdl1|P3~34         ; |Vhdl1|P3~34         ; combout          ;
+; |Vhdl1|P3~10         ; |Vhdl1|P3~10         ; combout          ;
+; |Vhdl1|Mux0~55       ; |Vhdl1|Mux0~55       ; combout          ;
+; |Vhdl1|P3~40         ; |Vhdl1|P3~40         ; combout          ;
+; |Vhdl1|Mux0~56       ; |Vhdl1|Mux0~56       ; combout          ;
+; |Vhdl1|P3~25         ; |Vhdl1|P3~25         ; combout          ;
+; |Vhdl1|P3~7          ; |Vhdl1|P3~7          ; combout          ;
+; |Vhdl1|P3~1          ; |Vhdl1|P3~1          ; combout          ;
+; |Vhdl1|Mux0~57       ; |Vhdl1|Mux0~57       ; combout          ;
+; |Vhdl1|P3~31         ; |Vhdl1|P3~31         ; combout          ;
+; |Vhdl1|Mux0~58       ; |Vhdl1|Mux0~58       ; combout          ;
+; |Vhdl1|P3~4          ; |Vhdl1|P3~4          ; combout          ;
+; |Vhdl1|P3~22         ; |Vhdl1|P3~22         ; combout          ;
+; |Vhdl1|P3~0          ; |Vhdl1|P3~0          ; combout          ;
+; |Vhdl1|Mux0~59       ; |Vhdl1|Mux0~59       ; combout          ;
+; |Vhdl1|P3~28         ; |Vhdl1|P3~28         ; combout          ;
+; |Vhdl1|Mux0~60       ; |Vhdl1|Mux0~60       ; combout          ;
+; |Vhdl1|Mux0~61       ; |Vhdl1|Mux0~61       ; combout          ;
+; |Vhdl1|P3~19         ; |Vhdl1|P3~19         ; combout          ;
+; |Vhdl1|P3~37         ; |Vhdl1|P3~37         ; combout          ;
+; |Vhdl1|P3~13         ; |Vhdl1|P3~13         ; combout          ;
+; |Vhdl1|Mux0~62       ; |Vhdl1|Mux0~62       ; combout          ;
+; |Vhdl1|P3~43         ; |Vhdl1|P3~43         ; combout          ;
+; |Vhdl1|Mux0~63       ; |Vhdl1|Mux0~63       ; combout          ;
+; |Vhdl1|Mux0~64       ; |Vhdl1|Mux0~64       ; combout          ;
+; |Vhdl1|Equal2~57     ; |Vhdl1|Equal2~57     ; combout          ;
+; |Vhdl1|Mux1~1102     ; |Vhdl1|Mux1~1102     ; combout          ;
+; |Vhdl1|Mux1~1103     ; |Vhdl1|Mux1~1103     ; combout          ;
+; |Vhdl1|P3~1175       ; |Vhdl1|P3~1175       ; combout          ;
+; |Vhdl1|Mux1~1104     ; |Vhdl1|Mux1~1104     ; combout          ;
+; |Vhdl1|Equal2~58     ; |Vhdl1|Equal2~58     ; combout          ;
+; |Vhdl1|Equal2~59     ; |Vhdl1|Equal2~59     ; combout          ;
+; |Vhdl1|comb~666      ; |Vhdl1|comb~666      ; combout          ;
+; |Vhdl1|LessThan7~94  ; |Vhdl1|LessThan7~94  ; combout          ;
+; |Vhdl1|P3~15         ; |Vhdl1|P3~15         ; combout          ;
+; |Vhdl1|Equal10~34    ; |Vhdl1|Equal10~34    ; combout          ;
+; |Vhdl1|Equal10~35    ; |Vhdl1|Equal10~35    ; combout          ;
+; |Vhdl1|P3~1176       ; |Vhdl1|P3~1176       ; combout          ;
+; |Vhdl1|P3~1177       ; |Vhdl1|P3~1177       ; combout          ;
+; |Vhdl1|Equal2~60     ; |Vhdl1|Equal2~60     ; combout          ;
+; |Vhdl1|P3~3          ; |Vhdl1|P3~3          ; combout          ;
+; |Vhdl1|Mux1~1105     ; |Vhdl1|Mux1~1105     ; combout          ;
+; |Vhdl1|Equal14~31    ; |Vhdl1|Equal14~31    ; combout          ;
+; |Vhdl1|P3~1178       ; |Vhdl1|P3~1178       ; combout          ;
+; |Vhdl1|Mux1~1106     ; |Vhdl1|Mux1~1106     ; combout          ;
+; |Vhdl1|P3~18         ; |Vhdl1|P3~18         ; combout          ;
+; |Vhdl1|P3~1179       ; |Vhdl1|P3~1179       ; combout          ;
+; |Vhdl1|P3~6          ; |Vhdl1|P3~6          ; combout          ;
+; |Vhdl1|Mux1~1107     ; |Vhdl1|Mux1~1107     ; combout          ;
+; |Vhdl1|P3~42         ; |Vhdl1|P3~42         ; combout          ;
+; |Vhdl1|Mux1~1108     ; |Vhdl1|Mux1~1108     ; combout          ;
+; |Vhdl1|Mux1~1109     ; |Vhdl1|Mux1~1109     ; combout          ;
+; |Vhdl1|Mux1~1110     ; |Vhdl1|Mux1~1110     ; combout          ;
+; |Vhdl1|Mux1~1111     ; |Vhdl1|Mux1~1111     ; combout          ;
+; |Vhdl1|Mux1~1112     ; |Vhdl1|Mux1~1112     ; combout          ;
+; |Vhdl1|Mux1~1113     ; |Vhdl1|Mux1~1113     ; combout          ;
+; |Vhdl1|Mux1~1114     ; |Vhdl1|Mux1~1114     ; combout          ;
+; |Vhdl1|Mux1~1115     ; |Vhdl1|Mux1~1115     ; combout          ;
+; |Vhdl1|Mux1~1116     ; |Vhdl1|Mux1~1116     ; combout          ;
+; |Vhdl1|Mux1~1117     ; |Vhdl1|Mux1~1117     ; combout          ;
+; |Vhdl1|Mux1~1118     ; |Vhdl1|Mux1~1118     ; combout          ;
+; |Vhdl1|Mux1~1119     ; |Vhdl1|Mux1~1119     ; combout          ;
+; |Vhdl1|Mux1~1120     ; |Vhdl1|Mux1~1120     ; combout          ;
+; |Vhdl1|Mux1~1121     ; |Vhdl1|Mux1~1121     ; combout          ;
+; |Vhdl1|Mux1~1122     ; |Vhdl1|Mux1~1122     ; combout          ;
+; |Vhdl1|comb~2        ; |Vhdl1|comb~2        ; combout          ;
+; |Vhdl1|Add1~139      ; |Vhdl1|Add1~139      ; combout          ;
+; |Vhdl1|comb~667      ; |Vhdl1|comb~667      ; combout          ;
+; |Vhdl1|P2~707        ; |Vhdl1|P2~707        ; combout          ;
+; |Vhdl1|comb~669      ; |Vhdl1|comb~669      ; combout          ;
+; |Vhdl1|comb~670      ; |Vhdl1|comb~670      ; combout          ;
+; |Vhdl1|comb~673      ; |Vhdl1|comb~673      ; combout          ;
+; |Vhdl1|comb~675      ; |Vhdl1|comb~675      ; combout          ;
+; |Vhdl1|comb~676      ; |Vhdl1|comb~676      ; combout          ;
+; |Vhdl1|comb~679      ; |Vhdl1|comb~679      ; combout          ;
+; |Vhdl1|comb~680      ; |Vhdl1|comb~680      ; combout          ;
+; |Vhdl1|comb~681      ; |Vhdl1|comb~681      ; combout          ;
+; |Vhdl1|comb~682      ; |Vhdl1|comb~682      ; combout          ;
+; |Vhdl1|comb~683      ; |Vhdl1|comb~683      ; combout          ;
+; |Vhdl1|comb~684      ; |Vhdl1|comb~684      ; combout          ;
+; |Vhdl1|comb~685      ; |Vhdl1|comb~685      ; combout          ;
+; |Vhdl1|comb~686      ; |Vhdl1|comb~686      ; combout          ;
+; |Vhdl1|comb~688      ; |Vhdl1|comb~688      ; combout          ;
+; |Vhdl1|Mux15~21      ; |Vhdl1|Mux15~21      ; combout          ;
+; |Vhdl1|comb~692      ; |Vhdl1|comb~692      ; combout          ;
+; |Vhdl1|comb~693      ; |Vhdl1|comb~693      ; combout          ;
+; |Vhdl1|Mux7~21       ; |Vhdl1|Mux7~21       ; combout          ;
+; |Vhdl1|comb~694      ; |Vhdl1|comb~694      ; combout          ;
+; |Vhdl1|comb~695      ; |Vhdl1|comb~695      ; combout          ;
+; |Vhdl1|comb~696      ; |Vhdl1|comb~696      ; combout          ;
+; |Vhdl1|comb~697      ; |Vhdl1|comb~697      ; combout          ;
+; |Vhdl1|comb~699      ; |Vhdl1|comb~699      ; combout          ;
+; |Vhdl1|comb~700      ; |Vhdl1|comb~700      ; combout          ;
+; |Vhdl1|comb~701      ; |Vhdl1|comb~701      ; combout          ;
+; |Vhdl1|comb~702      ; |Vhdl1|comb~702      ; combout          ;
+; |Vhdl1|comb~703      ; |Vhdl1|comb~703      ; combout          ;
+; |Vhdl1|comb~705      ; |Vhdl1|comb~705      ; combout          ;
+; |Vhdl1|Mux3~21       ; |Vhdl1|Mux3~21       ; combout          ;
+; |Vhdl1|comb~709      ; |Vhdl1|comb~709      ; combout          ;
+; |Vhdl1|comb~710      ; |Vhdl1|comb~710      ; combout          ;
+; |Vhdl1|Mux31~21      ; |Vhdl1|Mux31~21      ; combout          ;
+; |Vhdl1|comb~712      ; |Vhdl1|comb~712      ; combout          ;
+; |Vhdl1|comb~713      ; |Vhdl1|comb~713      ; combout          ;
+; |Vhdl1|comb~714      ; |Vhdl1|comb~714      ; combout          ;
+; |Vhdl1|comb~715      ; |Vhdl1|comb~715      ; combout          ;
+; |Vhdl1|comb~716      ; |Vhdl1|comb~716      ; combout          ;
+; |Vhdl1|comb~717      ; |Vhdl1|comb~717      ; combout          ;
+; |Vhdl1|comb~718      ; |Vhdl1|comb~718      ; combout          ;
+; |Vhdl1|comb~719      ; |Vhdl1|comb~719      ; combout          ;
+; |Vhdl1|comb~720      ; |Vhdl1|comb~720      ; combout          ;
+; |Vhdl1|comb~721      ; |Vhdl1|comb~721      ; combout          ;
+; |Vhdl1|Equal6~19     ; |Vhdl1|Equal6~19     ; combout          ;
+; |Vhdl1|LIFTOR[0]~907 ; |Vhdl1|LIFTOR[0]~907 ; combout          ;
+; |Vhdl1|LADD[1]       ; |Vhdl1|LADD[1]       ; combout          ;
+; |Vhdl1|LADD[0]       ; |Vhdl1|LADD[0]       ; combout          ;
+; |Vhdl1|DR[7]         ; |Vhdl1|DR[7]         ; combout          ;
+; |Vhdl1|UR[7]         ; |Vhdl1|UR[7]         ; combout          ;
+; |Vhdl1|DR[13]        ; |Vhdl1|DR[13]        ; combout          ;
+; |Vhdl1|UR[13]        ; |Vhdl1|UR[13]        ; combout          ;
+; |Vhdl1|DR[5]         ; |Vhdl1|DR[5]         ; combout          ;
+; |Vhdl1|UR[5]         ; |Vhdl1|UR[5]         ; combout          ;
+; |Vhdl1|DR[15]        ; |Vhdl1|DR[15]        ; combout          ;
+; |Vhdl1|UR[15]        ; |Vhdl1|UR[15]        ; combout          ;
+; |Vhdl1|DR[10]        ; |Vhdl1|DR[10]        ; combout          ;
+; |Vhdl1|UR[10]        ; |Vhdl1|UR[10]        ; combout          ;
+; |Vhdl1|DR[4]         ; |Vhdl1|DR[4]         ; combout          ;
+; |Vhdl1|UR[4]         ; |Vhdl1|UR[4]         ; combout          ;
+; |Vhdl1|DR[2]         ; |Vhdl1|DR[2]         ; combout          ;
+; |Vhdl1|UR[2]         ; |Vhdl1|UR[2]         ; combout          ;
+; |Vhdl1|DR[12]        ; |Vhdl1|DR[12]        ; combout          ;
+; |Vhdl1|UR[12]        ; |Vhdl1|UR[12]        ; combout          ;
+; |Vhdl1|DR[3]         ; |Vhdl1|DR[3]         ; combout          ;
+; |Vhdl1|UR[3]         ; |Vhdl1|UR[3]         ; combout          ;
+; |Vhdl1|DR[9]         ; |Vhdl1|DR[9]         ; combout          ;
+; |Vhdl1|UR[9]         ; |Vhdl1|UR[9]         ; combout          ;
+; |Vhdl1|DR[1]         ; |Vhdl1|DR[1]         ; combout          ;
+; |Vhdl1|UR[1]         ; |Vhdl1|UR[1]         ; combout          ;
+; |Vhdl1|DR[11]        ; |Vhdl1|DR[11]        ; combout          ;
+; |Vhdl1|UR[11]        ; |Vhdl1|UR[11]        ; combout          ;
+; |Vhdl1|DR[8]         ; |Vhdl1|DR[8]         ; combout          ;
+; |Vhdl1|UR[8]         ; |Vhdl1|UR[8]         ; combout          ;
+; |Vhdl1|DR[14]        ; |Vhdl1|DR[14]        ; combout          ;
+; |Vhdl1|UR[14]        ; |Vhdl1|UR[14]        ; combout          ;
+; |Vhdl1|DR[6]         ; |Vhdl1|DR[6]         ; combout          ;
+; |Vhdl1|UR[6]         ; |Vhdl1|UR[6]         ; combout          ;
+; |Vhdl1|DR[16]        ; |Vhdl1|DR[16]        ; combout          ;
+; |Vhdl1|UR[16]        ; |Vhdl1|UR[16]        ; combout          ;
+; |Vhdl1|DELAY         ; |Vhdl1|DELAY         ; combout          ;
+; |Vhdl1|DOWNIN        ; |Vhdl1|DOWNIN        ; combout          ;
+; |Vhdl1|UPIN          ; |Vhdl1|UPIN          ; combout          ;
+; |Vhdl1|LAMP          ; |Vhdl1|LAMP          ; padio            ;
+; |Vhdl1|RUN_WAIT[3]   ; |Vhdl1|RUN_WAIT[3]   ; padio            ;
+; |Vhdl1|ST_OUT[0]     ; |Vhdl1|ST_OUT[0]     ; padio            ;
+; |Vhdl1|ST_OUT[1]     ; |Vhdl1|ST_OUT[1]     ; padio            ;
+; |Vhdl1|ST_OUT[2]     ; |Vhdl1|ST_OUT[2]     ; padio            ;
+; |Vhdl1|ST_OUT[3]     ; |Vhdl1|ST_OUT[3]     ; padio            ;
++----------------------+----------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 6.0 Build 178 04/27/2006 SJ Full Version
+    Info: Processing started: Sun Jan 01 02:32:05 2006
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off Vhdl1 -c Vhdl1
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      30.49 %
+Info: Number of transitions in simulation is 3364
+Info: Vector file Vhdl1.sim.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Processing ended: Sun Jan 01 02:32:05 2006
+    Info: Elapsed time: 00:00:01
+
+

@@ -1,0 +1,219 @@
+Simulator report for five
+Sun Jan 01 03:14:30 2006
+Version 6.0 Build 178 04/27/2006 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2006 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 200.0 us     ;
+; Simulation Netlist Size     ; 50 nodes     ;
+; Simulation Coverage         ;      86.00 % ;
+; Total Number of Transitions ; 853          ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone II   ;
+; Device                      ; EP2C8T144C8  ;
++-----------------------------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                      ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Option                                                                                     ; Setting    ; Default Value ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Simulation mode                                                                            ; Timing     ; Timing        ;
+; Start time                                                                                 ; 0 ns       ; 0 ns          ;
+; Add pins automatically to simulation output waveforms                                      ; On         ; On            ;
+; Check outputs                                                                              ; Off        ; Off           ;
+; Report simulation coverage                                                                 ; On         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On         ; On            ;
+; Display missing 1-value coverage report                                                    ; On         ; On            ;
+; Display missing 0-value coverage report                                                    ; On         ; On            ;
+; Detect setup and hold time violations                                                      ; Off        ; Off           ;
+; Detect glitches                                                                            ; Off        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off        ; Off           ;
+; Generate Signal Activity File                                                              ; Off        ; Off           ;
+; Group bus channels in simulation results                                                   ; Off        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off        ;               ;
+; Glitch Filtering                                                                           ; Off        ; Off           ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      86.00 % ;
+; Total nodes checked                                 ; 50           ;
+; Total output ports checked                          ; 50           ;
+; Total output ports with complete 1/0-value coverage ; 43           ;
+; Total output ports with no 1/0-value coverage       ; 7            ;
+; Total output ports with no 1-value coverage         ; 7            ;
+; Total output ports with no 0-value coverage         ; 7            ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++--------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                ;
++------------------------------------+------------------------------------+------------------+
+; Node Name                          ; Output Port Name                   ; Output Port Type ;
++------------------------------------+------------------------------------+------------------+
+; |five|74163:inst2|f74163:sub|111   ; |five|74163:inst2|f74163:sub|111   ; regout           ;
+; |five|74163:inst2|f74163:sub|34    ; |five|74163:inst2|f74163:sub|34    ; regout           ;
+; |five|7449:inst24|34~7             ; |five|7449:inst24|34~7             ; combout          ;
+; |five|7449:inst24|31               ; |five|7449:inst24|31               ; combout          ;
+; |five|7449:inst24|36~54            ; |five|7449:inst24|36~54            ; combout          ;
+; |five|74163:inst|f74163:sub|111    ; |five|74163:inst|f74163:sub|111    ; regout           ;
+; |five|74163:inst|f74163:sub|134    ; |five|74163:inst|f74163:sub|134    ; regout           ;
+; |five|74163:inst|f74163:sub|122    ; |five|74163:inst|f74163:sub|122    ; regout           ;
+; |five|74163:inst|f74163:sub|34     ; |five|74163:inst|f74163:sub|34     ; regout           ;
+; |five|7449:inst23|34~7             ; |five|7449:inst23|34~7             ; combout          ;
+; |five|7449:inst23|35~42            ; |five|7449:inst23|35~42            ; combout          ;
+; |five|7449:inst23|31               ; |five|7449:inst23|31               ; combout          ;
+; |five|7449:inst23|36~54            ; |five|7449:inst23|36~54            ; combout          ;
+; |five|7449:inst23|32               ; |five|7449:inst23|32               ; combout          ;
+; |five|7449:inst23|37~23            ; |five|7449:inst23|37~23            ; combout          ;
+; |five|7449:inst23|33               ; |five|7449:inst23|33               ; combout          ;
+; |five|7449:inst24|32               ; |five|7449:inst24|32               ; combout          ;
+; |five|7449:inst24|37~41            ; |five|7449:inst24|37~41            ; combout          ;
+; |five|7449:inst24|33               ; |five|7449:inst24|33               ; combout          ;
+; |five|inst19~14                    ; |five|inst19~14                    ; combout          ;
+; |five|inst25~12                    ; |five|inst25~12                    ; combout          ;
+; |five|74163:inst2|f74163:sub|115   ; |five|74163:inst2|f74163:sub|115   ; combout          ;
+; |five|inst25                       ; |five|inst25                       ; combout          ;
+; |five|74163:inst|f74163:sub|115~11 ; |five|74163:inst|f74163:sub|115~11 ; combout          ;
+; |five|7449:inst23|50~24            ; |five|7449:inst23|50~24            ; combout          ;
+; |five|74163:inst|f74163:sub|137~12 ; |five|74163:inst|f74163:sub|137~12 ; combout          ;
+; |five|74163:inst|f74163:sub|126~24 ; |five|74163:inst|f74163:sub|126~24 ; combout          ;
+; |five|74163:inst2|f74163:sub|68    ; |five|74163:inst2|f74163:sub|68    ; combout          ;
+; |five|74163:inst|f74163:sub|34~9   ; |five|74163:inst|f74163:sub|34~9   ; combout          ;
+; |five|clk                          ; |five|clk                          ; combout          ;
+; |five|pin_name9                    ; |five|pin_name9                    ; padio            ;
+; |five|pin_name11                   ; |five|pin_name11                   ; padio            ;
+; |five|pin_name12                   ; |five|pin_name12                   ; padio            ;
+; |five|pin_name1                    ; |five|pin_name1                    ; padio            ;
+; |five|pin_name2                    ; |five|pin_name2                    ; padio            ;
+; |five|pin_name3                    ; |five|pin_name3                    ; padio            ;
+; |five|pin_name4                    ; |five|pin_name4                    ; padio            ;
+; |five|pin_name5                    ; |five|pin_name5                    ; padio            ;
+; |five|pin_name6                    ; |five|pin_name6                    ; padio            ;
+; |five|pin_name7                    ; |five|pin_name7                    ; padio            ;
+; |five|pin_name13                   ; |five|pin_name13                   ; padio            ;
+; |five|pin_name14                   ; |five|pin_name14                   ; padio            ;
+; |five|pin_name15                   ; |five|pin_name15                   ; padio            ;
++------------------------------------+------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++----------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                     ;
++-------------------------------------+-------------------------------------+------------------+
+; Node Name                           ; Output Port Name                    ; Output Port Type ;
++-------------------------------------+-------------------------------------+------------------+
+; |five|74163:inst2|f74163:sub|134    ; |five|74163:inst2|f74163:sub|134    ; regout           ;
+; |five|74163:inst2|f74163:sub|122    ; |five|74163:inst2|f74163:sub|122    ; regout           ;
+; |five|7449:inst24|35~42             ; |five|7449:inst24|35~42             ; combout          ;
+; |five|74163:inst2|f74163:sub|130~11 ; |five|74163:inst2|f74163:sub|130~11 ; combout          ;
+; |five|74163:inst2|f74163:sub|137    ; |five|74163:inst2|f74163:sub|137    ; combout          ;
+; |five|74163:inst2|f74163:sub|126    ; |five|74163:inst2|f74163:sub|126    ; combout          ;
+; |five|pin_name10                    ; |five|pin_name10                    ; padio            ;
++-------------------------------------+-------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++----------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                     ;
++-------------------------------------+-------------------------------------+------------------+
+; Node Name                           ; Output Port Name                    ; Output Port Type ;
++-------------------------------------+-------------------------------------+------------------+
+; |five|74163:inst2|f74163:sub|134    ; |five|74163:inst2|f74163:sub|134    ; regout           ;
+; |five|74163:inst2|f74163:sub|122    ; |five|74163:inst2|f74163:sub|122    ; regout           ;
+; |five|7449:inst24|35~42             ; |five|7449:inst24|35~42             ; combout          ;
+; |five|74163:inst2|f74163:sub|130~11 ; |five|74163:inst2|f74163:sub|130~11 ; combout          ;
+; |five|74163:inst2|f74163:sub|137    ; |five|74163:inst2|f74163:sub|137    ; combout          ;
+; |five|74163:inst2|f74163:sub|126    ; |five|74163:inst2|f74163:sub|126    ; combout          ;
+; |five|pin_name10                    ; |five|pin_name10                    ; padio            ;
++-------------------------------------+-------------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 6.0 Build 178 04/27/2006 SJ Full Version
+    Info: Processing started: Sun Jan 01 03:14:29 2006
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off five -c five
+Warning: Ignored node in vector source file. Can't find corresponding node name "pin_name" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "pin_name8" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "pin_name16" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "pin_name17" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "pin_name18" in design.
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      86.00 %
+Info: Number of transitions in simulation is 853
+Info: Vector file five.sim.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
+Info: Quartus II Simulator was successful. 0 errors, 5 warnings
+    Info: Processing ended: Sun Jan 01 03:14:29 2006
+    Info: Elapsed time: 00:00:00
+
+

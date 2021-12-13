@@ -1,0 +1,301 @@
+Analysis & Synthesis report for QDJB
+Sun Jan 01 01:55:02 2006
+Version 6.0 Build 178 04/27/2006 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Analysis & Synthesis Source Files Read
+  5. Analysis & Synthesis Resource Usage Summary
+  6. Analysis & Synthesis Resource Utilization by Entity
+  7. User-Specified and Inferred Latches
+  8. General Register Statistics
+  9. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 10. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2006 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++------------------------------------+------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Sun Jan 01 01:55:02 2006    ;
+; Quartus II Version                 ; 6.0 Build 178 04/27/2006 SJ Full Version ;
+; Revision Name                      ; QDJB                                     ;
+; Top-level Entity Name              ; Block1                                   ;
+; Family                             ; Cyclone II                               ;
+; Total logic elements               ; 82                                       ;
+; Total registers                    ; 20                                       ;
+; Total pins                         ; 29                                       ;
+; Total virtual pins                 ; 0                                        ;
+; Total memory bits                  ; 0                                        ;
+; Embedded Multiplier 9-bit elements ; 0                                        ;
+; Total PLLs                         ; 0                                        ;
++------------------------------------+------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                ;
++--------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                             ; Setting            ; Default Value      ;
++--------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                             ; EP2C8T144C8        ;                    ;
+; Top-level entity name                                              ; Block1             ; QDJB               ;
+; Family name                                                        ; Cyclone II         ; Stratix            ;
+; Use smart compilation                                              ; Off                ; Off                ;
+; Restructure Multiplexers                                           ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                ; Off                ; Off                ;
+; Preserve fewer node names                                          ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                          ; Off                ; Off                ;
+; Verilog Version                                                    ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                       ; VHDL93             ; VHDL93             ;
+; State Machine Processing                                           ; Auto               ; Auto               ;
+; Extract Verilog State Machines                                     ; On                 ; On                 ;
+; Extract VHDL State Machines                                        ; On                 ; On                 ;
+; Add Pass-Through Logic to Inferred RAMs                            ; On                 ; On                 ;
+; DSP Block Balancing                                                ; Auto               ; Auto               ;
+; Maximum DSP Block Usage                                            ; Unlimited          ; Unlimited          ;
+; NOT Gate Push-Back                                                 ; On                 ; On                 ;
+; Power-Up Don't Care                                                ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                       ; Off                ; Off                ;
+; Remove Duplicate Registers                                         ; On                 ; On                 ;
+; Ignore CARRY Buffers                                               ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                             ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                              ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                          ; Off                ; Off                ;
+; Ignore LCELL Buffers                                               ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                     ; Off                ; Off                ;
+; Optimization Technique -- Cyclone II                               ; Balanced           ; Balanced           ;
+; Carry Chain Length -- Stratix/Stratix GX/Cyclone/MAX II/Cyclone II ; 70                 ; 70                 ;
+; Auto Carry Chains                                                  ; On                 ; On                 ;
+; Auto Open-Drain Pins                                               ; On                 ; On                 ;
+; Remove Duplicate Logic                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                              ; Off                ; Off                ;
+; Perform gate-level register retiming                               ; Off                ; Off                ;
+; Allow register retiming to trade off Tsu/Tco with Fmax             ; On                 ; On                 ;
+; Auto ROM Replacement                                               ; On                 ; On                 ;
+; Auto RAM Replacement                                               ; On                 ; On                 ;
+; Auto Shift Register Replacement                                    ; On                 ; On                 ;
+; Auto Clock Enable Replacement                                      ; On                 ; On                 ;
+; Allow Synchronous Control Signals                                  ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                             ; Off                ; Off                ;
+; Auto Resource Sharing                                              ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                 ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                 ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                      ; Off                ; Off                ;
+; Maximum Number of M4K Memory Blocks                                ; Unlimited          ; Unlimited          ;
+; Ignore translate_off and translate_on Synthesis Directives         ; Off                ; Off                ;
+; Show Parameter Settings Tables in Synthesis Report                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                 ; Off                ; Off                ;
+; Retiming Meta-Stability Register Sequence Length                   ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                       ; Normal compilation ; Normal compilation ;
+; HDL message level                                                  ; Level2             ; Level2             ;
++--------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                     ;
++----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                     ;
++----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------+
+; JFQ.vhd                          ; yes             ; User VHDL File                     ; D:/写不出来抢答器吗/不用谢/绝对是真的抢答器/2018.5.28/JFQ.vhd    ;
+; YMQ.vhd                          ; yes             ; User VHDL File                     ; D:/写不出来抢答器吗/不用谢/绝对是真的抢答器/2018.5.28/YMQ.vhd    ;
+; JSQ.vhd                          ; yes             ; User VHDL File                     ; D:/写不出来抢答器吗/不用谢/绝对是真的抢答器/2018.5.28/JSQ.vhd    ;
+; Block1.bdf                       ; yes             ; User Block Diagram/Schematic File  ; D:/写不出来抢答器吗/不用谢/绝对是真的抢答器/2018.5.28/Block1.bdf ;
+; QDJB.vhd                         ; yes             ; Other                              ; D:/写不出来抢答器吗/不用谢/绝对是真的抢答器/2018.5.28/QDJB.vhd   ;
+; XZQ.vhd                          ; yes             ; Other                              ; D:/写不出来抢答器吗/不用谢/绝对是真的抢答器/2018.5.28/XZQ.vhd    ;
++----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Estimated Total logic elements              ; 82    ;
+; Total combinational functions               ; 82    ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 55    ;
+;     -- 3 input functions                    ; 17    ;
+;     -- <=2 input functions                  ; 10    ;
+;         -- Combinational cells for routing  ; 0     ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 82    ;
+;     -- arithmetic mode                      ; 0     ;
+; Total registers                             ; 20    ;
+; I/O pins                                    ; 29    ;
+; Maximum fan-out node                        ; CLR   ;
+; Maximum fan-out                             ; 18    ;
+; Total fan-out                               ; 381   ;
+; Average fan-out                             ; 2.91  ;
++---------------------------------------------+-------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                 ;
++----------------------------+-------------------+--------------+-------------+------+--------------+---------+-----------+------+--------------+---------------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; M4Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ;
++----------------------------+-------------------+--------------+-------------+------+--------------+---------+-----------+------+--------------+---------------------+
+; |Block1                    ; 82 (1)            ; 20 (0)       ; 0           ; 0    ; 0            ; 0       ; 0         ; 29   ; 0            ; |Block1             ;
+;    |JFQ:inst4|             ; 20 (20)           ; 16 (16)      ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; |Block1|JFQ:inst4   ;
+;    |JSQ:inst2|             ; 10 (10)           ; 4 (4)        ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; |Block1|JSQ:inst2   ;
+;    |QDJB:inst|             ; 22 (22)           ; 0 (0)        ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; |Block1|QDJB:inst   ;
+;    |XZQ:inst1|             ; 15 (15)           ; 0 (0)        ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; |Block1|XZQ:inst1   ;
+;    |YMQ:inst15|            ; 7 (7)             ; 0 (0)        ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; |Block1|YMQ:inst15  ;
+;    |YMQ:inst16|            ; 7 (7)             ; 0 (0)        ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; |Block1|YMQ:inst16  ;
++----------------------------+-------------------+--------------+-------------+------+--------------+---------+-----------+------+--------------+---------------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++----------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                ;
++-----------------------------------------------------+---------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal ; Free of Timing Hazards ;
++-----------------------------------------------------+---------------------+------------------------+
+; QDJB:inst|A1                                        ; GND                 ; yes                    ;
+; QDJB:inst|B1                                        ; GND                 ; yes                    ;
+; QDJB:inst|C1                                        ; GND                 ; yes                    ;
+; QDJB:inst|D1                                        ; GND                 ; yes                    ;
+; XZQ:inst1|temp[0]                                   ; XZQ:inst1|comb~14   ; yes                    ;
+; XZQ:inst1|temp[1]                                   ; XZQ:inst1|comb~14   ; yes                    ;
+; XZQ:inst1|temp[2]                                   ; XZQ:inst1|comb~14   ; yes                    ;
+; XZQ:inst1|temp[3]                                   ; XZQ:inst1|comb~14   ; yes                    ;
+; JSQ:inst2|DA[0]                                     ; GND                 ; yes                    ;
+; JSQ:inst2|DA[2]                                     ; GND                 ; yes                    ;
+; QDJB:inst|states[3]                                 ; GND                 ; yes                    ;
+; QDJB:inst|states[2]                                 ; GND                 ; yes                    ;
+; QDJB:inst|states[1]                                 ; GND                 ; yes                    ;
+; QDJB:inst|states[0]                                 ; GND                 ; yes                    ;
+; Number of user-specified and inferred latches = 14  ;                     ;                        ;
++-----------------------------------------------------+---------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 20    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 20    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 16    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |Block1|JSQ:inst2|TMPA[2]  ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |Block1|JSQ:inst2|TMPA[3]  ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Block1|XZQ:inst1|comb~13  ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |Block1|QDJB:inst|comb~12  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Analysis & Synthesis
+    Info: Version 6.0 Build 178 04/27/2006 SJ Full Version
+    Info: Processing started: Sun Jan 01 01:55:01 2006
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off QDJB -c QDJB
+Warning: Can't analyze file -- file C:/Documents and Settings/Administrator/桌面/2160500097/抢答器/QDJB.vhd is missing
+Info: Found 2 design units, including 1 entities, in source file JFQ.vhd
+    Info: Found design unit 1: JFQ-art
+    Info: Found entity 1: JFQ
+Info: Found 2 design units, including 1 entities, in source file YMQ.vhd
+    Info: Found design unit 1: YMQ-ART
+    Info: Found entity 1: YMQ
+Info: Found 2 design units, including 1 entities, in source file JSQ.vhd
+    Info: Found design unit 1: JSQ-art
+    Info: Found entity 1: JSQ
+Info: Found 1 design units, including 1 entities, in source file Block1.bdf
+    Info: Found entity 1: Block1
+Info: Elaborating entity "Block1" for the top level hierarchy
+Warning: Using design file QDJB.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info: Found design unit 1: QDJB-art
+    Info: Found entity 1: QDJB
+Info: Elaborating entity "QDJB" for hierarchy "QDJB:inst"
+Warning (10631): VHDL Process Statement warning at QDJB.vhd(16): inferring latch(es) for signal or variable "states", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at QDJB.vhd(16): inferring latch(es) for signal or variable "A1", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at QDJB.vhd(16): inferring latch(es) for signal or variable "B1", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at QDJB.vhd(16): inferring latch(es) for signal or variable "C1", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at QDJB.vhd(16): inferring latch(es) for signal or variable "D1", which holds its previous value in one or more paths through the process
+Info (10041): Verilog HDL or VHDL info at QDJB.vhd(16): inferred latch for "D1"
+Info (10041): Verilog HDL or VHDL info at QDJB.vhd(16): inferred latch for "C1"
+Info (10041): Verilog HDL or VHDL info at QDJB.vhd(16): inferred latch for "B1"
+Info (10041): Verilog HDL or VHDL info at QDJB.vhd(16): inferred latch for "A1"
+Info (10041): Verilog HDL or VHDL info at QDJB.vhd(16): inferred latch for "states[0]"
+Info (10041): Verilog HDL or VHDL info at QDJB.vhd(16): inferred latch for "states[1]"
+Info (10041): Verilog HDL or VHDL info at QDJB.vhd(16): inferred latch for "states[2]"
+Info (10041): Verilog HDL or VHDL info at QDJB.vhd(16): inferred latch for "states[3]"
+Info: Elaborating entity "YMQ" for hierarchy "YMQ:inst16"
+Warning: Using design file XZQ.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info: Found design unit 1: XZQ-art
+    Info: Found entity 1: XZQ
+Info: Elaborating entity "XZQ" for hierarchy "XZQ:inst1"
+Warning (10492): VHDL Process Statement warning at XZQ.vhd(21): signal "AA" is read inside the Process Statement but isn't in the Process Statement's sensivitity list
+Warning (10492): VHDL Process Statement warning at XZQ.vhd(23): signal "BB" is read inside the Process Statement but isn't in the Process Statement's sensivitity list
+Warning (10492): VHDL Process Statement warning at XZQ.vhd(25): signal "CC" is read inside the Process Statement but isn't in the Process Statement's sensivitity list
+Warning (10492): VHDL Process Statement warning at XZQ.vhd(27): signal "DD" is read inside the Process Statement but isn't in the Process Statement's sensivitity list
+Warning (10492): VHDL Process Statement warning at XZQ.vhd(29): signal "temp" is read inside the Process Statement but isn't in the Process Statement's sensivitity list
+Warning (10631): VHDL Process Statement warning at XZQ.vhd(16): inferring latch(es) for signal or variable "temp", which holds its previous value in one or more paths through the process
+Info (10041): Verilog HDL or VHDL info at XZQ.vhd(16): inferred latch for "temp[0]"
+Info (10041): Verilog HDL or VHDL info at XZQ.vhd(16): inferred latch for "temp[1]"
+Info (10041): Verilog HDL or VHDL info at XZQ.vhd(16): inferred latch for "temp[2]"
+Info (10041): Verilog HDL or VHDL info at XZQ.vhd(16): inferred latch for "temp[3]"
+Info: Elaborating entity "JFQ" for hierarchy "JFQ:inst4"
+Info: Elaborating entity "JSQ" for hierarchy "JSQ:inst2"
+Warning (10631): VHDL Process Statement warning at JSQ.vhd(13): inferring latch(es) for signal or variable "DA", which holds its previous value in one or more paths through the process
+Warning (10492): VHDL Process Statement warning at JSQ.vhd(26): signal "CLR" is read inside the Process Statement but isn't in the Process Statement's sensivitity list
+Info (10041): Verilog HDL or VHDL info at JSQ.vhd(13): inferred latch for "DA[0]"
+Info (10041): Verilog HDL or VHDL info at JSQ.vhd(13): inferred latch for "DA[1]"
+Info (10041): Verilog HDL or VHDL info at JSQ.vhd(13): inferred latch for "DA[2]"
+Info (10041): Verilog HDL or VHDL info at JSQ.vhd(13): inferred latch for "DA[3]"
+Warning: Latch XZQ:inst1|temp[0] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal QDJB:inst|A1
+Warning: Latch XZQ:inst1|temp[1] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal QDJB:inst|A1
+Warning: Latch XZQ:inst1|temp[2] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal QDJB:inst|A1
+Warning: Latch XZQ:inst1|temp[3] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal QDJB:inst|A1
+Info: Implemented 111 device resources after synthesis - the final resource count might be different
+    Info: Implemented 11 input pins
+    Info: Implemented 18 output pins
+    Info: Implemented 82 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 24 warnings
+    Info: Processing ended: Sun Jan 01 01:55:02 2006
+    Info: Elapsed time: 00:00:02
+
+

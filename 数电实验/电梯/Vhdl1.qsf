@@ -1,0 +1,63 @@
+# Copyright (C) 1991-2006 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, Altera MegaCore Function License 
+# Agreement, or other applicable license agreement, including, 
+# without limitation, that your use is for the sole purpose of 
+# programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the 
+# applicable agreement for further details.
+
+
+# The default values for assignments are stored in the file
+#		Vhdl1_assignment_defaults.qdf
+# If this file doesn't exist, and for assignments not listed, see file
+#		assignment_defaults.qdf
+
+# Altera recommends that you do not modify this file. This
+# file is updated automatically by the Quartus II software
+# and any changes you make may be lost or overwritten.
+
+
+set_global_assignment -name FAMILY "Cyclone II"
+set_global_assignment -name DEVICE EP2C8T144C8
+set_global_assignment -name TOP_LEVEL_ENTITY Vhdl1
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 6.0
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "08:39:32  JANUARY 01, 2006"
+set_global_assignment -name LAST_QUARTUS_VERSION 6.0
+set_global_assignment -name DEVICE_FILTER_PACKAGE TQFP
+set_global_assignment -name DEVICE_FILTER_PIN_COUNT 144
+set_global_assignment -name DEVICE_FILTER_SPEED_GRADE 8
+set_global_assignment -name VHDL_FILE "C:\\Documents and Settings\\Administrator\\×ÀÃæ\\ÐÅºÅµÆ\\Vhdl1.vhd"
+set_global_assignment -name VECTOR_WAVEFORM_FILE Vhdl1.vwf
+set_global_assignment -name VHDL_FILE ../fotk/Vhdl1.vhd
+set_location_assignment PIN_93 -to CLKIN
+set_location_assignment PIN_18 -to CLOSE
+set_location_assignment PIN_76 -to DELAY
+set_location_assignment PIN_143 -to DIRECT[0]
+set_location_assignment PIN_142 -to DIRECT[1]
+set_location_assignment PIN_141 -to DIRECT[2]
+set_location_assignment PIN_139 -to DIRECT[3]
+set_location_assignment PIN_75 -to DOWNIN
+set_location_assignment PIN_25 -to LAMP
+set_location_assignment PIN_79 -to RUN_STOP
+set_location_assignment PIN_43 -to RUN_WAIT[0]
+set_location_assignment PIN_44 -to RUN_WAIT[1]
+set_location_assignment PIN_41 -to RUN_WAIT[2]
+set_location_assignment PIN_42 -to RUN_WAIT[3]
+set_location_assignment PIN_87 -to ST_CH
+set_location_assignment PIN_121 -to ST_OUT[0]
+set_location_assignment PIN_122 -to ST_OUT[1]
+set_location_assignment PIN_52 -to ST_OUT[2]
+set_location_assignment PIN_53 -to ST_OUT[3]
+set_location_assignment PIN_92 -to UPIN
+set_location_assignment PIN_134 -to DIRECT
+set_location_assignment PIN_40 -to RUN_WAIT
+set_location_assignment PIN_51 -to ST_OUT
+set_global_assignment -name RESERVE_ASDO_AFTER_CONFIGURATION "AS INPUT TRI-STATED"
+set_global_assignment -name CYCLONEII_RESERVE_NCEO_AFTER_CONFIGURATION "USE AS REGULAR IO"
+set_global_assignment -name BDF_FILE Vhdl1.bdf

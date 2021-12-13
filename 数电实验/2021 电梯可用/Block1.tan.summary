@@ -1,0 +1,126 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tsu
+Slack          : N/A
+Required Time  : None
+Actual Time    : 8.320 ns
+From           : RUN_STOP
+To             : Vhdl1:inst|LIFTOR[0]
+From Clock     : --
+To Clock       : CLK_IN
+Failed Paths   : 0
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 13.020 ns
+From           : Vhdl1:inst|DIR[0]
+To             : DIRECT[3]
+From Clock     : ST_CH
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : 9.682 ns
+From           : ST_CH
+To             : Vhdl1:inst|DR[3]
+From Clock     : --
+To Clock       : ST_CH
+Failed Paths   : 0
+
+Type           : Clock Setup: 'CLK_IN'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 25.63 MHz ( period = 39.014 ns )
+From           : Vhdl1:inst|LADD[0]
+To             : Vhdl1:inst|LIFTOR[3]
+From Clock     : CLK_IN
+To Clock       : CLK_IN
+Failed Paths   : 0
+
+Type           : Clock Setup: 'ST_CH'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 59.48 MHz ( period = 16.813 ns )
+From           : Vhdl1:inst|LADD[0]
+To             : Vhdl1:inst|LADD[0]
+From Clock     : ST_CH
+To Clock       : ST_CH
+Failed Paths   : 0
+
+Type           : Clock Setup: 'UPIN'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 97.24 MHz ( period = 10.284 ns )
+From           : Vhdl1:inst|LADD[0]
+To             : Vhdl1:inst|LADD[0]
+From Clock     : UPIN
+To Clock       : UPIN
+Failed Paths   : 0
+
+Type           : Clock Setup: 'DOWNIN'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 107.19 MHz ( period = 9.329 ns )
+From           : Vhdl1:inst|LADD[0]
+To             : Vhdl1:inst|LADD[0]
+From Clock     : DOWNIN
+To Clock       : DOWNIN
+Failed Paths   : 0
+
+Type           : Clock Hold: 'CLK_IN'
+Slack          : Not operational: Clock Skew > Data Delay
+Required Time  : None
+Actual Time    : N/A
+From           : Vhdl1:inst|LIFTOR[2]
+To             : Vhdl1:inst|LADD[0]
+From Clock     : CLK_IN
+To Clock       : CLK_IN
+Failed Paths   : 165
+
+Type           : Clock Hold: 'ST_CH'
+Slack          : Not operational: Clock Skew > Data Delay
+Required Time  : None
+Actual Time    : N/A
+From           : Vhdl1:inst|UR[14]
+To             : Vhdl1:inst|LADD[0]
+From Clock     : ST_CH
+To Clock       : ST_CH
+Failed Paths   : 161
+
+Type           : Clock Hold: 'UPIN'
+Slack          : Not operational: Clock Skew > Data Delay
+Required Time  : None
+Actual Time    : N/A
+From           : Vhdl1:inst|UR[10]
+To             : Vhdl1:inst|LADD[0]
+From Clock     : UPIN
+To Clock       : UPIN
+Failed Paths   : 17
+
+Type           : Clock Hold: 'DOWNIN'
+Slack          : Not operational: Clock Skew > Data Delay
+Required Time  : None
+Actual Time    : N/A
+From           : Vhdl1:inst|DR[16]
+To             : Vhdl1:inst|LADD[0]
+From Clock     : DOWNIN
+To Clock       : DOWNIN
+Failed Paths   : 17
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 360
+
+--------------------------------------------------------------------------------------
+
