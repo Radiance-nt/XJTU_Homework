@@ -9,10 +9,12 @@
 \usepackage{listings}
 \usepackage{xcolor}
 \usepackage{graphicx}
+\usepackage{enumerate}
 
+\usepackage{enumitem}
 \title{计算机网络实验报告}
-\author{匿名}
-\date{计算机00班 2200000000}
+\author{作者 }
+\date{班级}
 
 
 \usepackage{listings} 
@@ -209,6 +211,94 @@ PC1可以ping到PC2；PC2可以ping到PC1；
 \end{figure} 
 此外，通过\emph{show running-config}也可以观察到，各路由器配置正确。
 
+\newpage
+
+\section{面向HTTP协议的抓包分析实验}
+
+
+\subsection{实验目的}
+
+\begin{enumerate}[(1)]
+    \item 利用Ethereal软件分析HTTP及其下层协议（TCP协议）
+    \item 了解网络中数据封装的概念
+    \item  掌握HTTP及TCP协议的工作过程。 
+\end{enumerate}
+
+\subsection{实验内容}
+\begin{enumerate}[(1)]
+    \item 启动Ethereal软件，进行报文截获
+    \item 在浏览器访问www.xjtu.edu.cn页面。
+    \item 分析截获报文。
+\end{enumerate}
+
+\subsection{实验原理}
+\subsubsection{http协议}
+
+Web的客户/服务器：
+略
+
+HTTP服务的特点：
+
+\begin{itemize}
+    \item 略
+    \item 略
+    \item 略
+\end{itemize}
+
+\subsubsection{TCP的工作流程}
+
+\begin{enumerate}[(1)]
+    \item 三次握手建立连接，略{
+    \begin{itemize}
+        \item  第一次握手：略
+        \item 第二次握手：略
+        \item 第三次握手：略
+    \end{itemize}
+    }
+    \item  略
+    \item 四次挥手释放连接，略{
+    \begin{itemize}
+        \item 略
+        \item 略
+        \item 略
+        \item 略
+    \end{itemize}
+    }
+\end{enumerate}
+
+
+\subsection{实验过程}
+\begin{enumerate}[(1)]
+    \item 查看www.xjtu.edu.cn对应的ip地址，可以看到其ip地址为202.117.1.13
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=6in]{http0.png}
+    \end{figure} 
+    \item {打开wireshark软件，在过滤器里利用
+    
+    \textbf{ip.addr == 202.117.1.13 and (tcp.srcport==<port> or tcp.port==<port>}
+    
+    过滤出对应数据包}
+    \item 从截获的报文中选择HTTP请求报文和HTTP应答报文。
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=5in]{http2.png}
+    \end{figure} 
+    HTTP协议的工作过程和各字段的值如2.3.1章节所述。
+    
+    \item 从截获报文中选择TCP建立连接和释放连接的报文。
+    TCP三次握手数据包的序号为518,523,527；挥手数据包的序号为648,649,666。
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=5in]{http1.png}
+    \end{figure}
+    
+    各个字段的值并概括TCP协议的工作过程如2.3.2章节所述。
+\end{enumerate}
+
+\subsection{实验总结}
+通过wireshark软件抓包，获取了浏览器访问域名服务器时相互交换的TCP与HTTP报文。
+了解网络中数据封装的概念，进一步掌握HTTP及TCP协议的工作过程，分析了TCP三次握手、四次挥手的过程。
 
 \end{document}
 
