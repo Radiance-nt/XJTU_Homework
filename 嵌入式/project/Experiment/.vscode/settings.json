@@ -1,0 +1,10 @@
+{
+    "C_Cpp.default.configurationProvider": "ms-vscode.makefile-tools",
+    "files.associations": {
+        "init.h": "c",
+        "uart.h": "c",
+        "lcd.h": "c",
+        "types.h": "c",
+        "trap.h": "c"
+    }
+}
